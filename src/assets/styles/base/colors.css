@@ -3,4 +3,40 @@
 
 /* Variáveis CSS de cores */
 :root {
+  /* Absolute Colors */
+  --white: #fff;
+  --black: #000;
+
+  /* Yellow Shades */
+  --yellow55: #ffd11a;
+  --yellow60: #ffd633;
+  --yellow70: #ffe066;
+  --yellow80: #ffeb99;
+  --yellow90: #fff5cc;
+  --yellow95: #fffae5;
+  --yellow97: #fffcf0;
+  --yellow99: #fbfbfe;
+
+  /* Dark Shades */
+  --dark08: #141414;
+  --dark10: #1a1a1a;
+  --dark15: #262626;
+  --dark20: #333333;
+  --dark25: #404040;
+  --dark30: #4d4d4d;
+  --dark35: #595959;
+  --dark40: #666666;
+
+  /* Grey Shades */
+  --gray50: #7e7e81;
+  --gray60: #98989a;
+  --gray70: #b3b3b3;
+  --gray80: #cccccc;
+  --gray90: #e4e4e7;
+  --gray95: #f1f1f3;
+  --gray97: #f7f7f8;
+  --gray99: #fcfcfd;
+
+  /* Cor principal */
+  --primary-color: var(--yellow55);
 }
