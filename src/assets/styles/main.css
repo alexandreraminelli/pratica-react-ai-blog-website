@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* Estilos globais do projeto */
+
+/* Estilos base */
+@import url("base/normalize.css");
+
+/* Cores */
+@import url("base/colors.css");
+
+/* Tipografia */
+@import url("base/typography.css");

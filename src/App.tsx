@@ -11,10 +11,6 @@ import Contact from "./pages/Contact"
 import Header from "./layout/Header/Header" // cabeçalho
 import Footer from "./layout/Footer/Footer" // rodapé
 
-/* Importações de svgs */
-/* Importação de estilos */
-import "./assets/styles/App.css"
-
 /**
  * Função do componente App. É o componente principal da página e exibe o conteúdo do site.
  * @returns O conteúdo JSX do site.
