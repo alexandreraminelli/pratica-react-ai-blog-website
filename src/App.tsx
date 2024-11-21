@@ -1,33 +1,49 @@
-import { useState } from 'react'
-import './assets/styles/App.css'
+// Importação do React Router Dom
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+/* Componentes de páginas */
+import Home from "./pages/Home"
+import News from "./pages/News"
+import Podcasts from "./pages/Podcasts"
+import Resources from "./pages/Resources"
+import Contact from "./pages/Contact"
 
-function App() {
-  const [count, setCount] = useState(0)
+/* Importação de Componentes */
+import Header from "./layout/Header/Header" // cabeçalho
+import Footer from "./layout/Footer/Footer" // rodapé
 
+/* Importações de svgs */
+/* Importação de estilos */
+import "./assets/styles/App.css"
+
+/**
+ * Função do componente App. É o componente principal da página e exibe o conteúdo do site.
+ * @returns O conteúdo JSX do site.
+ */
+export default function App(): JSX.Element {
+  // Retorno JSX
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* Header */}
+      <Header />
+
+      {/* Corpo da página */}
+      <BrowserRouter>
+        <Routes>
+          {/* Página Inicial */}
+          <Route path="/" element={<Home />} />
+          {/* Página Noticias */}
+          <Route path="/noticias" element={<News />} />
+          {/* Página Podcasts */}
+          <Route path="/podcasts" element={<Podcasts />} />
+          {/* Página Recursos */}
+          <Route path="/recursos" element={<Resources />} />
+          {/* Página Contato */}
+          <Route path="/contato" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+
+      {/* Footer */}
+      <Footer />
     </>
   )
 }
-
-export default App
