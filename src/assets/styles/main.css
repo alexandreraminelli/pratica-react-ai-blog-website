@@ -12,3 +12,6 @@
 
 /* Background */
 @import url("base/background.css");
+
+/* Container */
+@import url("base/container.css");

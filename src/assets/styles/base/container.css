@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* Container do site */
+
+:root {
+  /* Container para telas pequenas */
+  --container: 91vw;
+
+  /* Padding de container */
+  --padding-container: calc((100vw - var(--container)) / 2);
+}
+
+/* Classe que adiciona padding-inline para formar um container */
+.pd-container {
+  padding-inline: var(--padding-container);
+}
+
+/* Container para telas grandes */
+@media screen and (min-width: 1406px) {
+  :root {
+    --container: 1280px;
+  }
+}
