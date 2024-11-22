@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* Estilos pro Header (cabeçalho) */
+
+header.siteHeader {
+  /* Background */
+  background-color: var(--background-secondary);
+
+  /* Flexbox */
+}
