@@ -13,5 +13,8 @@
 /* Background */
 @import url("base/background.css");
 
+/* Bordas */
+@import url("base/border.css");
+
 /* Container */
 @import url("base/container.css");

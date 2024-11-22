@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* Estilos de bordas */
+
+/* Variáveis CSS de borda */
+:root {
+  --border01: 1px solid var(--dark15);
+}
+
+/* Classe pra borda arredondada 01 */
+.border-rounded-01 {
+  border-radius: 10px;
+  border: var(--border01);
+}
