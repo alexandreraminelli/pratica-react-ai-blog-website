@@ -18,6 +18,7 @@ export default function Header(): JSX.Element {
       {/* Header Principal */}
       <header className={`pd-container ${styles.siteHeader}`}>
         {/* Logo do site */}
+        <img src="src\assets\images\logo\logo-inline.svg" alt="Logo da Future Tech" />
 
         {/* Navbar */}
         <Navbar />
