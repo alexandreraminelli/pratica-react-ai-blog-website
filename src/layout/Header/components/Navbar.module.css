@@ -22,6 +22,16 @@ nav.navbar {
       border: var(--border01);
       /* Cantos arredondados */
       border-radius: 6px;
+
+      /* Efeitos de transição */
+      transition-property: border-color, color, background-color;
+      transition-duration: 0.5s;
+      /* Efeito hover dos links */
+      &:hover {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        background-color: var(--background-primary);
+      }
     }
   }
 }
