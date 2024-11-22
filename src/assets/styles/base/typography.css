@@ -35,3 +35,16 @@ h2,
 h3 {
   font-family: var(--heading-font);
 }
+
+/* Links (âncoras) */
+a {
+  /* Links sem cor de destaque */
+  &.no-recolor {
+    color: inherit;
+  }
+
+  /* Links sem underline */
+  &.no-underline {
+    text-decoration: none;
+  }
+}

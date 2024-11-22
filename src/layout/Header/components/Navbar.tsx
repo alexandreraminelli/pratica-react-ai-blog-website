@@ -43,7 +43,9 @@ export default function Navbar(): JSX.Element {
 function LinkNavbar({ link, text }: LinksNavbarProps): JSX.Element {
   return (
     <li>
-      <a href={link}>{text}</a>
+      <a href={link} className="no-recolor no-underline">
+        {text}
+      </a>
     </li>
   )
 }
