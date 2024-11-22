@@ -1,6 +1,7 @@
 /* importação de componentes */
-import MenuIcon from "./MenuIcon"
-import IconButton from "../../../components/Buttons/IconButton/IconButton"
+import MenuIcon from "./MenuIcon" // ícone SVG de menu
+import CloseIcon from "../../../components/icons/CloseIcon" //ícone SVG de fechar (X)
+import IconButton from "../../../components/Buttons/IconButton/IconButton" // botão de ícone
 
 /* importação de modulos CSS */
 import styles from "./Navbar.module.css"
@@ -22,14 +23,20 @@ interface LinksNavbarProps {
 export default function Navbar(): JSX.Element {
   return (
     <nav className={styles.navbar}>
-      {/* Links do Navbar */}
-      <ul>
-        <LinkNavbar link="/" text="Início" />
-        <LinkNavbar link="/noticias" text="Notícias" />
-        <LinkNavbar link="/podcasts" text="Podcasts" />
-        <LinkNavbar link="/recursos" text="Recursos" />
-        <LinkNavbar link="/contato" text="Contato" />
-      </ul>
+      {/* Sidebar: elementos ocultos no mobile */}
+      <div className={styles.sidebar}>
+        {/* Botão de fechar o navbar mobile */}
+        <IconButton Icon={CloseIcon} />
+
+        {/* Lista de links do Navbar */}
+        <ul>
+          <LinkNavbar link="/" text="Início" />
+          <LinkNavbar link="/noticias" text="Notícias" />
+          <LinkNavbar link="/podcasts" text="Podcasts" />
+          <LinkNavbar link="/recursos" text="Recursos" />
+          <LinkNavbar link="/contato" text="Contato" />
+        </ul>
+      </div>
 
       {/* Botão de menu mobile */}
       <IconButton Icon={MenuIcon} />

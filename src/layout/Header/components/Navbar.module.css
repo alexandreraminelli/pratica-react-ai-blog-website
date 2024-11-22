@@ -14,9 +14,6 @@ nav.navbar {
   & button {
     /* Cor do ícone */
     color: var(--letter-white);
-    /* Tamanho */
-    width: 34px;
-    height: auto;
   }
 }
 
@@ -24,11 +21,14 @@ nav.navbar {
 @media screen and (max-width: 824px) {
   nav.navbar {
     /* Lista de links (sidebar) */
-    & ul {
+    & .sidebar {
       /* Posição */
       position: fixed;
       top: 0;
       right: 0;
+
+      /* Layout */
+      flex-direction: column;
 
       /* Ocultar navbar no mobile */
       transform: translateX(100%);
