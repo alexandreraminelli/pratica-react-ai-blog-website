@@ -22,9 +22,8 @@ interface LinksNavbarProps {
  */
 export default function Navbar(): JSX.Element {
   return (
-    <nav className={styles.navbar}>
-      {/* Sidebar: elementos ocultos no mobile */}
-      <div className={styles.sidebar}>
+    <>
+      <nav className={styles.navbar}>
         {/* Botão de fechar o navbar mobile */}
         <IconButton Icon={CloseIcon} />
 
@@ -34,13 +33,12 @@ export default function Navbar(): JSX.Element {
           <LinkNavbar link="/noticias" text="Notícias" />
           <LinkNavbar link="/podcasts" text="Podcasts" />
           <LinkNavbar link="/recursos" text="Recursos" />
-          <LinkNavbar link="/contato" text="Contato" />
+          <LinkNavbar link="/contato" text="Entre em Contato" />
         </ul>
-      </div>
-
+      </nav>
       {/* Botão de menu mobile */}
-      <IconButton Icon={MenuIcon} />
-    </nav>
+      <IconButton Icon={MenuIcon} className={styles.MenuButton} />
+    </>
   )
 }
 

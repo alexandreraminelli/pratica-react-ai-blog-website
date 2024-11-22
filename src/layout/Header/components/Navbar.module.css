@@ -1,37 +1,89 @@
 @charset "UTF-8";
 /* Estilos para o navbar do header */
 
+/* Navbar */
 nav.navbar {
   /* Lista de links */
   & ul {
+    /* Remover padding pré-definido de listas */
+    padding-inline-start: 0;
     /* Remover marcador */
     list-style-type: none;
+
     /* Layout */
     display: flex;
-  }
 
-  /* Botão de menu hambúrguer */
-  & button {
-    /* Cor do ícone */
-    color: var(--letter-white);
+    /* Links */
+    & a {
+      /* Borda */
+      border: var(--border01);
+      /* Cantos arredondados */
+      border-radius: 6px;
+    }
   }
+}
+
+/* Cor dos ícones */
+.MenuButton,
+nav.navbar button {
+  color: var(--letter-white);
 }
 
 /* navbar mobile (exibido na sidebar) */
 @media screen and (max-width: 824px) {
   nav.navbar {
-    /* Lista de links (sidebar) */
-    & .sidebar {
-      /* Posição */
-      position: fixed;
-      top: 0;
-      right: 0;
+    /* Posição */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    /* Dimensões */
+    width: 57vw;
+    max-width: 240px;
+    /* Espaçamento */
+    padding: 16px 24px;
 
+    /* Background */
+    background-color: var(--background-secondary);
+    /* Borda */
+    border-left: var(--border02);
+
+    /* Lista de links */
+    ul {
       /* Layout */
+      align-items: center;
       flex-direction: column;
+      gap: 24px;
 
-      /* Ocultar navbar no mobile */
-      transform: translateX(100%);
+      /* list-item de links */
+      & li {
+        /* Links ocuparem toda a largura */
+        min-width: 192px;
+        width: 100%;
+
+        /* Links */
+        & a {
+          /* Tipografia */
+          font-size: 1.25rem; /* 20px */
+
+          /* Layout */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          /* Espaçamento */
+          padding: 12px 18px;
+        }
+      }
     }
+  }
+}
+
+@media screen and (min-width: 825px) {
+  /* Ocultar botões de abrir e fechar o menu mobile */
+  /* Cor dos ícones */
+  .MenuButton,
+  nav.navbar button {
+    display: none;
   }
 }
