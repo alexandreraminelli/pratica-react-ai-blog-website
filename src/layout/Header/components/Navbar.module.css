@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* Estilos para o navbar do header */
+
+nav.navbar {
+}
+
+/* navbar mobile (exibido na sidebar) */
+@media screen and (max-width: 824px) {
+  nav.navbar {
+    /* Lista de links (sidebar) */
+    & ul {
+      /* Posição */
+      position: fixed;
+      top: 0;
+      right: 0;
+
+      /* Ocultar navbar no mobile */
+      transform: translateX(100%);
+    }
+  }
+}

@@ -2,6 +2,9 @@
 import MenuIcon from "./MenuIcon"
 import IconButton from "../../../components/Buttons/IconButton/IconButton"
 
+/* importação de modulos CSS */
+import styles from "./Navbar.module.css"
+
 /**
  * Interface do props do componente Links Navbar.
  */
@@ -18,7 +21,7 @@ interface LinksNavbarProps {
  */
 export default function Navbar(): JSX.Element {
   return (
-    <nav>
+    <nav className={styles.navbar}>
       {/* Links do Navbar */}
       <ul>
         <LinkNavbar link="/" text="Início" />
