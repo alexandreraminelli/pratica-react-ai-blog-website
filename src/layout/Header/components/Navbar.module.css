@@ -2,6 +2,22 @@
 /* Estilos para o navbar do header */
 
 nav.navbar {
+  /* Lista de links */
+  & ul {
+    /* Remover marcador */
+    list-style-type: none;
+    /* Layout */
+    display: flex;
+  }
+
+  /* Botão de menu hambúrguer */
+  & button {
+    /* Cor do ícone */
+    color: var(--letter-white);
+    /* Tamanho */
+    width: 34px;
+    height: auto;
+  }
 }
 
 /* navbar mobile (exibido na sidebar) */

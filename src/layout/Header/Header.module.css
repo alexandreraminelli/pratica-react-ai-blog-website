@@ -12,6 +12,7 @@ header.siteHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   /* Imagem da logo */
   & .logo {
