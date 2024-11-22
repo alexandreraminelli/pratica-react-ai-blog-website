@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* Estilos de background */
+
+/* Variáveis de background */
+:root {
+  /* Background primário */
+  --background-primary: var(--dark08);
+  /* Background secundário */
+  --background-secondary: var(--dark10);
+  /* Background terciário */
+  --background-tertiary: var(--dark15);
+}
+
+body {
+  /* Background padrão da página */
+  background-color: var(--background-primary);
+}

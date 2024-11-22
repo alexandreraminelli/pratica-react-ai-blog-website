@@ -9,3 +9,6 @@
 
 /* Tipografia */
 @import url("base/typography.css");
+
+/* Background */
+@import url("base/background.css");
