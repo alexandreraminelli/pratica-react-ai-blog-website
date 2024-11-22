@@ -3,6 +3,9 @@
 
 /* Navbar */
 nav.navbar {
+  /* Layout */
+  display: flex;
+
   /* Lista de links */
   & ul {
     /* Remover padding pré-definido de listas */
@@ -23,9 +26,9 @@ nav.navbar {
   }
 }
 
-/* Cor dos ícones */
+/* Cor dos ícones dos botões */
 .MenuButton,
-nav.navbar button {
+.FecharButton {
   color: var(--letter-white);
 }
 
@@ -43,10 +46,19 @@ nav.navbar button {
     /* Espaçamento */
     padding: 16px 24px;
 
+    /* Layout */
+    flex-direction: column;
+
     /* Background */
     background-color: var(--background-secondary);
     /* Borda */
     border-left: var(--border02);
+
+    /* Botão de fechar o navbar mobile */
+    .FecharButton {
+      /* Alinhamento à direita */
+      align-self: flex-end;
+    }
 
     /* Lista de links */
     ul {
@@ -81,9 +93,8 @@ nav.navbar button {
 
 @media screen and (min-width: 825px) {
   /* Ocultar botões de abrir e fechar o menu mobile */
-  /* Cor dos ícones */
   .MenuButton,
-  nav.navbar button {
+  .FecharButton {
     display: none;
   }
 }

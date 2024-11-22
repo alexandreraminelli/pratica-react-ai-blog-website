@@ -25,7 +25,7 @@ export default function Navbar(): JSX.Element {
     <>
       <nav className={styles.navbar}>
         {/* Botão de fechar o navbar mobile */}
-        <IconButton Icon={CloseIcon} />
+        <IconButton Icon={CloseIcon} className={styles.FecharButton} />
 
         {/* Lista de links do Navbar */}
         <ul>
