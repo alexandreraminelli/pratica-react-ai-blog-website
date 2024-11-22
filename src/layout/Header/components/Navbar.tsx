@@ -15,11 +15,13 @@ export default function Navbar(): JSX.Element {
   return (
     <nav>
       {/* Links do Navbar */}
-      <LinkNavbar link="/" text="Início" />
-      <LinkNavbar link="/noticias" text="Notícias" />
-      <LinkNavbar link="/podcasts" text="Podcasts" />
-      <LinkNavbar link="/recursos" text="Recursos" />
-      <LinkNavbar link="/contato" text="Contato" />
+      <ul>
+        <LinkNavbar link="/" text="Início" />
+        <LinkNavbar link="/noticias" text="Notícias" />
+        <LinkNavbar link="/podcasts" text="Podcasts" />
+        <LinkNavbar link="/recursos" text="Recursos" />
+        <LinkNavbar link="/contato" text="Contato" />
+      </ul>
     </nav>
   )
 }
