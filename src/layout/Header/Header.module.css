@@ -8,5 +8,15 @@ header.siteHeader {
   /* Espaçamento */
   padding-block: 20px;
 
-  /* Flexbox */
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  /* Imagem da logo */
+  & .logo {
+    /* Dimensões */
+    height: 35px;
+    width: auto;
+  }
 }
