@@ -1,3 +1,7 @@
+/* importação de componentes */
+import MenuIcon from "./MenuIcon"
+import IconButton from "../../../components/Buttons/IconButton/IconButton"
+
 /**
  * Interface do props do componente Links Navbar.
  */
@@ -10,6 +14,7 @@ interface LinksNavbarProps {
 
 /**
  * Componente da barra de navegação.
+ * @returns O JSX da barra de navegação.
  */
 export default function Navbar(): JSX.Element {
   return (
@@ -22,6 +27,9 @@ export default function Navbar(): JSX.Element {
         <LinkNavbar link="/recursos" text="Recursos" />
         <LinkNavbar link="/contato" text="Contato" />
       </ul>
+
+      {/* Botão de menu mobile */}
+      <IconButton Icon={MenuIcon} />
     </nav>
   )
 }
