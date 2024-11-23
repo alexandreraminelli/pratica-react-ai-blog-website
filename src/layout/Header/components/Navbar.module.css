@@ -40,6 +40,11 @@ nav.navbar {
 .MenuButton,
 .FecharButton {
   color: var(--letter-white);
+  /* Efeito hover nos botões */
+  transition: color 0.5s;
+  &:hover {
+    color: var(--primary-color);
+  }
 }
 
 /* navbar mobile (exibido na sidebar) */
