@@ -8,7 +8,7 @@ header.siteHeader {
   border-block: var(--border01);
 
   /* Espaçamento */
-  padding-block: 20px;
+  padding-block: 16px;
 
   /* Layout */
   display: flex;
@@ -19,7 +19,7 @@ header.siteHeader {
   /* Imagem da logo */
   & .logo {
     /* Dimensões */
-    height: 35px;
+    height: 40px;
     width: auto;
   }
 }
