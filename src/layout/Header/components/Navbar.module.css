@@ -59,6 +59,11 @@ nav.navbar {
     /* Layout */
     flex-direction: column;
 
+    /* Ocultar o navbar no mobile fora da tela */
+    transform: translateX(100%);
+    /* Transição ao ocultar/exibir */
+    transition: transform 0.5s ease-in-out;
+
     /* Background */
     background-color: var(--background-secondary);
     /* Borda */
@@ -97,6 +102,11 @@ nav.navbar {
           padding: 12px 18px;
         }
       }
+    }
+
+    /* Navbar ativo no sidebar */
+    &.active {
+      transform: translateX(0);
     }
   }
 }

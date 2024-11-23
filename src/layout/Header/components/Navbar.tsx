@@ -1,3 +1,5 @@
+import { useState } from "react" // estados de uso
+
 /* importação de componentes */
 import MenuIcon from "./MenuIcon" // ícone SVG de menu
 import CloseIcon from "../../../components/icons/CloseIcon" //ícone SVG de fechar (X)
@@ -21,11 +23,18 @@ interface LinksNavbarProps {
  * @returns O JSX da barra de navegação.
  */
 export default function Navbar(): JSX.Element {
+  /* exibir/ocultar o navbar mobile */
+  // Criação de estado de uso para controlar se o navbar está ativo
+  const [isNavbarActive, setIsNavbarActive] = useState(false)
+  // Handlers para abrir e fechar o menu
+  const handleMenuOpen = () => setIsNavbarActive(true)
+  const handleMenuClose = () => setIsNavbarActive(false)
+
   return (
     <>
-      <nav className={styles.navbar}>
+      <nav className={`${styles.navbar} ${isNavbarActive ? styles.active : ""}`}>
         {/* Botão de fechar o navbar mobile */}
-        <IconButton Icon={CloseIcon} className={styles.FecharButton} />
+        <IconButton Icon={CloseIcon} className={styles.FecharButton} onClick={handleMenuClose} />
 
         {/* Lista de links do Navbar */}
         <ul>
@@ -37,7 +46,7 @@ export default function Navbar(): JSX.Element {
         </ul>
       </nav>
       {/* Botão de menu mobile */}
-      <IconButton Icon={MenuIcon} className={styles.MenuButton} />
+      <IconButton Icon={MenuIcon} className={styles.MenuButton} onClick={handleMenuOpen} />
     </>
   )
 }

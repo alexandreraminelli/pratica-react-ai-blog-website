@@ -7,8 +7,10 @@ import styles from "./IconButton.module.css"
 interface IconButtonProps {
   /** Ícone do botão */
   Icon: React.ComponentType
-  /** Classes personalizadas */
+  /** Classes personalizadas (opcional) */
   className?: string | null
+  /** Funções a serem chamadas ao clicar no botão (opcional) */
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 /**
@@ -16,10 +18,14 @@ interface IconButtonProps {
  * @param Icon O ícone a ser exibido.
  * @returns O botão com o ícone.
  */
-export default function IconButton({ Icon, className }: IconButtonProps): JSX.Element {
+export default function IconButton({ Icon, className, onClick }: IconButtonProps): JSX.Element {
   return (
-    <button className={`${styles.iconButton} ${className || ""}`}>
-      <Icon />
+    <button
+      // Atributos do botão
+      className={`${styles.iconButton} ${className || ""}`} // classes CSS do botão
+      onClick={onClick} // função a ser chamada ao clicar no botão
+    >
+      <Icon /> {/* Ícone do botão */}
     </button>
   )
 }
