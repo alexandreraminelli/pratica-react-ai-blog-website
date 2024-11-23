@@ -35,3 +35,9 @@ h2,
 h3 {
   font-family: var(--heading-font);
 }
+
+/* Cor de texto selecionado */
+::selection {
+  background-color: var(--primary-color);
+  color: var(--black-letter);
+}
