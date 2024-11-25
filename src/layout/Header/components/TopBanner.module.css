@@ -21,3 +21,12 @@
     width: 20px;
   }
 }
+
+/* Telas grandes */
+@media screen and (min-width: 440px) {
+  .topBanner {
+    /* Alterar alinhamento */
+    justify-content: center;
+    gap: 10px; /* espaçamento entre texto e ícone */
+  }
+}
