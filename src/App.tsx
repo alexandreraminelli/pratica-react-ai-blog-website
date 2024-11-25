@@ -6,6 +6,7 @@ import News from "./pages/News"
 import Podcasts from "./pages/Podcasts"
 import Resources from "./pages/Resources"
 import Contact from "./pages/Contact"
+import NotFound from "./pages/NotFound"
 
 /* Importação de Componentes */
 import Header from "./layout/Header/Header" // cabeçalho
@@ -36,6 +37,9 @@ export default function App(): JSX.Element {
           <Route path="/recursos" element={<Resources />} />
           {/* Página Contato */}
           <Route path="/contato" element={<Contact />} />
+
+          {/* Página 404 (Not Found) */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
 
