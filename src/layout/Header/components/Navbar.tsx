@@ -1,4 +1,5 @@
 import { useState } from "react" // estados de uso
+import { BrowserRouter, useLocation } from "react-router-dom" // hook useLocation
 
 /* importação de componentes */
 import MenuIcon from "./MenuIcon" // ícone SVG de menu
@@ -28,14 +29,17 @@ export default function Navbar(): JSX.Element {
         <IconButton Icon={CloseIcon} className={styles.FecharButton} onClick={handleMenuClose} />
 
         {/* Lista de links do Navbar */}
-        <ul>
-          <LinkNavbar link="/" text="Início" />
-          <LinkNavbar link="/noticias" text="Notícias" />
-          <LinkNavbar link="/podcasts" text="Podcasts" />
-          <LinkNavbar link="/recursos" text="Recursos" />
-          <LinkNavbar link="/contato" text="Entre em Contato" button />
-        </ul>
+        <BrowserRouter>
+          <ul>
+            <LinkNavbar link="/" text="Início" />
+            <LinkNavbar link="/noticias" text="Notícias" />
+            <LinkNavbar link="/podcasts" text="Podcasts" />
+            <LinkNavbar link="/recursos" text="Recursos" />
+            <LinkNavbar link="/contato" text="Entre em Contato" button />
+          </ul>
+        </BrowserRouter>
       </nav>
+
       {/* Botão de menu mobile */}
       <IconButton Icon={MenuIcon} className={styles.MenuButton} onClick={handleMenuOpen} />
     </>
@@ -57,11 +61,19 @@ interface LinksNavbarProps {
  * Componente dos links do navbar.
  */
 function LinkNavbar({ link, text, button }: LinksNavbarProps): JSX.Element {
+  /* Verificar se o link é da página atual */
+  const location = useLocation() // obter o caminho atual da URL
+  const isCurrentPage = location.pathname === link // verificar se o link corresponde a URL atual
+
+  /* retorno JSX */
   return (
     <li>
       <a
         href={link} // endereço do link
-        className={`no-recolor no-underline ${button ? styleButton.primaryButton : ""}`} // classes CSS
+        // classes CSS:
+        className={`no-recolor no-underline 
+          ${button ? styleButton.primaryButton : ""}
+          ${isCurrentPage ? styles.linkAtual : ""}`}
       >
         {text} {/* Texto do link */}
       </a>

@@ -38,7 +38,26 @@ nav.navbar {
       &:hover {
         border-color: var(--primary-color);
         color: var(--primary-color);
+      }
+
+      /* Efeito hover + link da página atual */
+      &:hover,
+      &.linkAtual {
+        /* Cor de fundo */
         background-color: var(--background-primary);
+      }
+
+      /* Link da página atual */
+      &.linkAtual {
+        /* Borda */
+        border: var(--border03);
+        /* Tipografia */
+        color: var(--white-letter);
+
+        /* Efeito hover */
+        &:hover {
+          color: var(--primary-color);
+        }
       }
     }
   }

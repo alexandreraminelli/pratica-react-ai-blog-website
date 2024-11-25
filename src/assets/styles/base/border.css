@@ -5,6 +5,7 @@
 :root {
   --border01: 1px solid var(--dark15);
   --border02: 1px solid var(--primary-color);
+  --border03: 1px solid var(--dark20);
 }
 
 /* Classe pra borda arredondada 01 */
