@@ -56,7 +56,7 @@ nav.navbar {
 }
 
 /* Navbar mobile (no sidebar) */
-@media screen and (max-width: 824px) {
+@media screen and (max-width: 880px) {
   nav.navbar {
     /* Posição */
     position: fixed;
@@ -125,7 +125,7 @@ nav.navbar {
 }
 
 /* Navbar desktop (no header) */
-@media screen and (min-width: 825px) {
+@media screen and (min-width: 881px) {
   /* Ocultar botões de abrir e fechar o menu mobile */
   .MenuButton,
   .FecharButton {
