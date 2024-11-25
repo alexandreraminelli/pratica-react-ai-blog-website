@@ -10,6 +10,8 @@ nav.navbar {
   & ul {
     /* Remover padding pré-definido de listas */
     padding-inline-start: 0;
+    /* Remover margens */
+    margin: 0;
     /* Remover marcador */
     list-style-type: none;
 
@@ -78,6 +80,8 @@ nav.navbar {
     .FecharButton {
       /* Alinhamento à direita */
       align-self: flex-end;
+      /* Espaçamento entre o botão e os links */
+      margin-bottom: 24px;
     }
 
     /* Lista de links */
