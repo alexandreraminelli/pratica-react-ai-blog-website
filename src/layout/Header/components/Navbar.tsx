@@ -1,4 +1,4 @@
-import { useState } from "react" // estados de uso
+import { useEffect, useState } from "react" // estados de uso
 import { Link, useLocation } from "react-router-dom" // hook useLocation
 
 /* importação de componentes */
@@ -15,13 +15,25 @@ import styleButton from "../../../components/Buttons/PrimaryButton/PrimaryButton
  * @returns O JSX da barra de navegação.
  */
 export default function Navbar(): JSX.Element {
-  /* exibir/ocultar o navbar mobile */
+  /* Exibir/ocultar o navbar mobile */
   // Criação de estado de uso para controlar se o navbar está ativo
   const [isNavbarActive, setIsNavbarActive] = useState(false)
+  // Obter o caminho atual
+  const location = useLocation()
+
   // Handlers para abrir e fechar o menu
   const handleMenuOpen = () => setIsNavbarActive(true)
   const handleMenuClose = () => setIsNavbarActive(false)
 
+  // Fechar o navbar mobile quando a rota (página) mudar
+  useEffect(
+    () => {
+      handleMenuClose() // Chama a função que fecha o menu
+    },
+    [location] // Dispara o evento quando a rota mudar
+  )
+
+  /* Retorno JSX */
   return (
     <>
       <nav className={`${styles.navbar} ${isNavbarActive ? styles.active : ""}`}>
