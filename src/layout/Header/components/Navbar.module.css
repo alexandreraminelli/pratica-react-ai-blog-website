@@ -22,8 +22,14 @@ nav.navbar {
     & a {
       /* Borda */
       border: var(--border01);
+      border-color: rgba(0, 0, 0, 0);
       /* Cantos arredondados */
       border-radius: 6px;
+
+      /* Layout */
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       /* Efeitos de transição */
       transition-property: border-color, color, background-color;
@@ -49,7 +55,7 @@ nav.navbar {
   }
 }
 
-/* navbar mobile (exibido na sidebar) */
+/* Navbar mobile (no sidebar) */
 @media screen and (max-width: 824px) {
   nav.navbar {
     /* Posição */
@@ -97,15 +103,13 @@ nav.navbar {
         min-width: 192px;
         width: 100%;
 
-        /* Links */
+        /* Links mobile */
         & a {
+          /* Borda */
+          border: var(--border01);
+
           /* Tipografia */
           font-size: 1.25rem; /* 20px */
-
-          /* Layout */
-          display: flex;
-          align-items: center;
-          justify-content: center;
 
           /* Espaçamento */
           padding: 12px 18px;
@@ -120,10 +124,45 @@ nav.navbar {
   }
 }
 
+/* Navbar desktop (no header) */
 @media screen and (min-width: 825px) {
   /* Ocultar botões de abrir e fechar o menu mobile */
   .MenuButton,
   .FecharButton {
     display: none;
+  }
+
+  nav.navbar {
+    width: 100%;
+    /* Lista de links */
+    ul {
+      /* Dimensões */
+      width: 100%;
+      /* Layout */
+      flex-direction: row;
+      justify-content: center;
+      gap: 24px;
+
+      /* list-item */
+      & li {
+        /* Links desktop */
+        & a {
+          /* Espaçamento */
+          padding: 10px 18px;
+
+          /* Tipografia */
+          font-size: 0.875rem; /* 14px */
+          color: var(--gray-letter1);
+        }
+      }
+    }
+  }
+}
+
+/* Navbar para telas extra-large */
+@media screen and (min-width: 1600px) {
+  nav.navbar ul li a {
+    /* Tipografia */
+    font-size: 1.063rem; /* 17px */
   }
 }
