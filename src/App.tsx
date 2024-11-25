@@ -19,11 +19,12 @@ export default function App(): JSX.Element {
   // Retorno JSX
   return (
     <>
-      {/* Header */}
-      <Header />
-
       {/* Corpo da página */}
       <BrowserRouter>
+        {/* Header */}
+        <Header />
+
+        {/* Rotas pras páginas */}
         <Routes>
           {/* Página Inicial */}
           <Route path="/" element={<Home />} />

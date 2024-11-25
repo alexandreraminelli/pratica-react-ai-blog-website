@@ -1,5 +1,5 @@
 import { useState } from "react" // estados de uso
-import { BrowserRouter, useLocation } from "react-router-dom" // hook useLocation
+import { Link, useLocation } from "react-router-dom" // hook useLocation
 
 /* importação de componentes */
 import MenuIcon from "./MenuIcon" // ícone SVG de menu
@@ -29,15 +29,13 @@ export default function Navbar(): JSX.Element {
         <IconButton Icon={CloseIcon} className={styles.FecharButton} onClick={handleMenuClose} />
 
         {/* Lista de links do Navbar */}
-        <BrowserRouter>
-          <ul>
-            <LinkNavbar link="/" text="Início" />
-            <LinkNavbar link="/noticias" text="Notícias" />
-            <LinkNavbar link="/podcasts" text="Podcasts" />
-            <LinkNavbar link="/recursos" text="Recursos" />
-            <LinkNavbar link="/contato" text="Entre em Contato" button />
-          </ul>
-        </BrowserRouter>
+        <ul>
+          <LinkNavbar link="/" text="Início" />
+          <LinkNavbar link="/noticias" text="Notícias" />
+          <LinkNavbar link="/podcasts" text="Podcasts" />
+          <LinkNavbar link="/recursos" text="Recursos" />
+          <LinkNavbar link="/contato" text="Entre em Contato" button />
+        </ul>
       </nav>
 
       {/* Botão de menu mobile */}
@@ -68,15 +66,15 @@ function LinkNavbar({ link, text, button }: LinksNavbarProps): JSX.Element {
   /* retorno JSX */
   return (
     <li>
-      <a
-        href={link} // endereço do link
+      <Link
+        to={link} // endereço do link
         // classes CSS:
         className={`no-recolor no-underline 
           ${button ? styleButton.primaryButton : ""}
           ${isCurrentPage ? styles.linkAtual : ""}`}
       >
         {text} {/* Texto do link */}
-      </a>
+      </Link>
     </li>
   )
 }
