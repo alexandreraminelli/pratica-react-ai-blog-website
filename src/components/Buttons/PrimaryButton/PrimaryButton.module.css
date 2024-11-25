@@ -16,6 +16,8 @@
   color: var(--black-letter) !important;
   font-size: 1.063rem; /* 17px */
   font-weight: 500;
+  /* Não quebrar o texto */
+  text-wrap: nowrap;
 
   /* Transições */
   transition-property: background-color;

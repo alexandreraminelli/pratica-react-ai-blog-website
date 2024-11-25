@@ -133,7 +133,11 @@ nav.navbar {
   }
 
   nav.navbar {
+    /* Dimensões */
     width: 100%;
+    /* Espaçamento */
+    margin-inline-start: 24px;
+
     /* Lista de links */
     ul {
       /* Dimensões */
@@ -153,6 +157,17 @@ nav.navbar {
           /* Tipografia */
           font-size: 1rem; /* 16px */
           color: var(--gray-letter1);
+        }
+
+        /* Primeiro link */
+        &:first-child {
+          /* Não deixar os links ficarem "espremidos" à esquerda */
+          margin-inline-start: auto;
+        }
+        /* Último link */
+        &:last-child {
+          /* Último link alinhado à direita */
+          margin-inline-start: auto;
         }
       }
     }
