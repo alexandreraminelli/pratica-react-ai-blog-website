@@ -47,7 +47,7 @@ nav.navbar {
 /* Cor dos ícones dos botões */
 .MenuButton,
 .FecharButton {
-  color: var(--letter-white);
+  color: var(--white-letter);
   /* Efeito hover nos botões */
   transition: color 0.5s;
   &:hover {
@@ -151,7 +151,7 @@ nav.navbar {
           padding: 10px 18px;
 
           /* Tipografia */
-          font-size: 0.875rem; /* 14px */
+          font-size: 1rem; /* 16px */
           color: var(--gray-letter1);
         }
       }

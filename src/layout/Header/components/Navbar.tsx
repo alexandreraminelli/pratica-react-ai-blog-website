@@ -5,8 +5,9 @@ import MenuIcon from "./MenuIcon" // ícone SVG de menu
 import CloseIcon from "../../../components/icons/CloseIcon" //ícone SVG de fechar (X)
 import IconButton from "../../../components/Buttons/IconButton/IconButton" // botão de ícone
 
-/* importação de modulos CSS */
+/* importação de módulos CSS */
 import styles from "./Navbar.module.css"
+import styleButton from "../../../components/Buttons/PrimaryButton/PrimaryButton.module.css"
 
 /**
  * Componente da barra de navegação.
@@ -32,7 +33,7 @@ export default function Navbar(): JSX.Element {
           <LinkNavbar link="/noticias" text="Notícias" />
           <LinkNavbar link="/podcasts" text="Podcasts" />
           <LinkNavbar link="/recursos" text="Recursos" />
-          <LinkNavbar link="/contato" text="Entre em Contato" />
+          <LinkNavbar link="/contato" text="Entre em Contato" button />
         </ul>
       </nav>
       {/* Botão de menu mobile */}
@@ -49,15 +50,20 @@ interface LinksNavbarProps {
   link: string
   /** O texto exibido no link do navbar. */
   text: string
+  /** Se o link deve ser estilizado como um button (opcional) */
+  button?: boolean
 }
 /**
  * Componente dos links do navbar.
  */
-function LinkNavbar({ link, text }: LinksNavbarProps): JSX.Element {
+function LinkNavbar({ link, text, button }: LinksNavbarProps): JSX.Element {
   return (
     <li>
-      <a href={link} className="no-recolor no-underline">
-        {text}
+      <a
+        href={link} // endereço do link
+        className={`no-recolor no-underline ${button ? styleButton.primaryButton : ""}`} // classes CSS
+      >
+        {text} {/* Texto do link */}
       </a>
     </li>
   )
