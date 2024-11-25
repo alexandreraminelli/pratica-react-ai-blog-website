@@ -1,7 +1,8 @@
 /* Header (cabeçalho) do site */
 
 /* Importação de componentes */
-import Navbar from "./components/Navbar" // importação da barra de navegação
+import Navbar from "./components/Navbar" // barra de navegação
+import TopBanner from "./components/TopBanner" // banner superior
 
 /* Importação de estilos CSS */
 import styles from "./Header.module.css"
@@ -17,6 +18,7 @@ export default function Header(): JSX.Element {
   return (
     <>
       {/* Top Banner */}
+      <TopBanner />
 
       {/* Header Principal */}
       <header className={`pd-container ${styles.siteHeader}`}>
