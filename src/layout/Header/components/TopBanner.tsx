@@ -13,7 +13,10 @@ export default function TopBanner(): JSX.Element {
     <div className={`pd-container ${styles.topBanner}`}>
       {/* Texto do banner */}
       <p>
-        Não perca as novidades! <Link to="/contato">Assine nossa newsletter</Link>
+        Não perca as novidades!{" "}
+        <Link to="/contato" className="no-recolor">
+          Assine nossa newsletter
+        </Link>
       </p>
 
       {/* Ícone */}

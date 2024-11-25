@@ -2,4 +2,22 @@
 /* Estilos do banner superior que aparece em cima do cabeçalho */
 
 .topBanner {
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Tipografia */
+  color: var(--gray-letter2);
+  font-size: 0.875rem; /* 14px */
+
+  /* Ícone */
+  & svg {
+    /* cor do ícone */
+    color: var(--primary-color);
+    /* dimensões */
+    height: 20px;
+    width: 20px;
+  }
 }
