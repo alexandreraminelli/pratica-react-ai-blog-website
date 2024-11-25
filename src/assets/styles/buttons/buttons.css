@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* Estilos globais para botões */
+
+button,
+.button {
+  /* Mudar cursor do mouse */
+  cursor: pointer;
+}

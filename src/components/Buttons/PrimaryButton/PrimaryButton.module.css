@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* Estilos para botão primário */
+
+.primaryButton {
+  /* Resolver conflitos de estilos */
+  /* Bordas */
+  border: none !important;
+
+  /* Preenchimento */
+  background-color: var(--primary-color) !important;
+
+  /* Espaçamento */
+  padding: 10px 14px;
+
+  /* Tipografia */
+  color: var(--black-letter) !important;
+  font-size: 1.063rem; /* 17px */
+  font-weight: 500;
+  /* Não quebrar o texto */
+  text-wrap: nowrap;
+
+  /* Transições */
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  /* Efeito hover nos botões primários */
+  &:hover {
+    background-color: var(--yellow80) !important;
+  }
+}

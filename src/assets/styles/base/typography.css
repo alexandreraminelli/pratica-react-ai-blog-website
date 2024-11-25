@@ -36,6 +36,19 @@ h3 {
   font-family: var(--heading-font);
 }
 
+/* Links (âncoras) */
+a {
+  /* Links sem cor de destaque */
+  &.no-recolor {
+    color: inherit;
+  }
+
+  /* Links sem underline */
+  &.no-underline {
+    text-decoration: none;
+  }
+}
+
 /* Cor de texto selecionado */
 ::selection {
   background-color: var(--primary-color);

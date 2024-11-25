@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/* Estilos para o navbar do header */
+
+/* Navbar */
+nav.navbar {
+  /* Layout */
+  display: flex;
+
+  /* Lista de links */
+  & ul {
+    /* Remover padding pré-definido de listas */
+    padding-inline-start: 0;
+    /* Remover margens */
+    margin: 0;
+    /* Remover marcador */
+    list-style-type: none;
+
+    /* Layout */
+    display: flex;
+
+    /* Links */
+    & a {
+      /* Borda */
+      border: var(--border01);
+      border-color: rgba(0, 0, 0, 0);
+      /* Cantos arredondados */
+      border-radius: 6px;
+
+      /* Layout */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      /* Efeitos de transição */
+      transition-property: border-color, color, background-color;
+      transition-duration: 0.5s;
+      /* Efeito hover dos links */
+      &:hover {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+      }
+
+      /* Efeito hover + link da página atual */
+      &:hover,
+      &.linkAtual {
+        /* Cor de fundo */
+        background-color: var(--background-primary);
+      }
+
+      /* Link da página atual */
+      &.linkAtual {
+        /* Borda */
+        border: var(--border03);
+        /* Tipografia */
+        color: var(--white-letter);
+
+        /* Efeito hover */
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+/* Cor dos ícones dos botões */
+.MenuButton,
+.FecharButton {
+  color: var(--white-letter);
+  /* Efeito hover nos botões */
+  transition: color 0.5s;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+/* Navbar mobile (no sidebar) */
+@media screen and (max-width: 880px) {
+  nav.navbar {
+    /* Posição */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    /* Dimensões */
+    width: 57vw;
+    max-width: 240px;
+    /* Espaçamento */
+    padding: 16px 24px;
+
+    /* Layout */
+    flex-direction: column;
+
+    /* Ocultar o navbar no mobile fora da tela */
+    transform: translateX(100%);
+    /* Transição ao ocultar/exibir */
+    transition: transform 0.5s ease-in-out;
+
+    /* Background */
+    background-color: var(--background-secondary);
+    /* Borda */
+    border-left: var(--border02);
+
+    /* Botão de fechar o navbar mobile */
+    .FecharButton {
+      /* Alinhamento à direita */
+      align-self: flex-end;
+      /* Espaçamento entre o botão e os links */
+      margin-bottom: 24px;
+    }
+
+    /* Lista de links */
+    ul {
+      /* Layout */
+      align-items: center;
+      flex-direction: column;
+      gap: 24px;
+
+      /* list-item de links */
+      & li {
+        /* Links ocuparem toda a largura */
+        min-width: 192px;
+        width: 100%;
+
+        /* Links mobile */
+        & a {
+          /* Borda */
+          border: var(--border01);
+
+          /* Tipografia */
+          font-size: 1.25rem; /* 20px */
+
+          /* Espaçamento */
+          padding: 12px 18px;
+        }
+      }
+    }
+
+    /* Navbar ativo no sidebar */
+    &.active {
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Navbar desktop (no header) */
+@media screen and (min-width: 881px) {
+  /* Ocultar botões de abrir e fechar o menu mobile */
+  .MenuButton,
+  .FecharButton {
+    display: none;
+  }
+
+  nav.navbar {
+    /* Dimensões */
+    width: 100%;
+    /* Espaçamento */
+    margin-inline-start: 24px;
+
+    /* Lista de links */
+    ul {
+      /* Dimensões */
+      width: 100%;
+      /* Layout */
+      flex-direction: row;
+      justify-content: center;
+      gap: 24px;
+
+      /* list-item */
+      & li {
+        /* Links desktop */
+        & a {
+          /* Espaçamento */
+          padding: 10px 18px;
+
+          /* Tipografia */
+          font-size: 1rem; /* 16px */
+          color: var(--gray-letter1);
+        }
+
+        /* Primeiro link */
+        &:first-child {
+          /* Não deixar os links ficarem "espremidos" à esquerda */
+          margin-inline-start: auto;
+        }
+        /* Último link */
+        &:last-child {
+          /* Último link alinhado à direita */
+          margin-inline-start: auto;
+        }
+      }
+    }
+  }
+}
+
+/* Navbar para telas extra-large */
+@media screen and (min-width: 1600px) {
+  nav.navbar ul li a {
+    /* Tipografia */
+    font-size: 1.063rem; /* 17px */
+  }
+}

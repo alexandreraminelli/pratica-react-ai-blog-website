@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* Estilos para Icon Buttons (botões que possuem apenas ícone e não possuem preenchimento ou bordas) */
+
+.iconButton {
+  /* Remover preenchimento e borda */
+  background: none;
+  border: none;
+
+  /* Espaçamento e dimensões */
+  padding: 0;
+
+  /* Ícone */
+  & svg {
+    /* Tamanho padrão */
+    width: 40px;
+    height: 40px;
+  }
+}

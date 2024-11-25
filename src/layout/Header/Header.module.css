@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* Estilos pro Header (cabeçalho) */
+
+header.siteHeader {
+  /* Background */
+  background-color: var(--background-secondary);
+  /* Bordas */
+  border-block: var(--border01);
+
+  /* Espaçamento */
+  padding-block: 16px;
+
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Imagem da logo */
+  & .logo {
+    /* Dimensões */
+    height: 40px;
+    width: auto;
+  }
+}
+
+/* Header desktop */
+@media screen and (min-width: 768px) {
+  header.siteHeader {
+    /* Espaçamento */
+    padding-block: 20px;
+  }
+}
+
+/* Header large desktop */
+@media screen and (min-width: 1600px) {
+  header.siteHeader {
+    /* Espaçamento */
+    padding-block: 24px;
+
+    /* Imagem da logo */
+    & .logo {
+      /* Dimensões */
+      height: 50px;
+    }
+  }
+}
