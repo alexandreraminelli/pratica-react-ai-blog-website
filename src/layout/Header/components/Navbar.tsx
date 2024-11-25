@@ -9,16 +9,6 @@ import IconButton from "../../../components/Buttons/IconButton/IconButton" // bo
 import styles from "./Navbar.module.css"
 
 /**
- * Interface do props do componente Links Navbar.
- */
-interface LinksNavbarProps {
-  /** O endereço para o link do navbar. */
-  link: string
-  /** O texto exibido no link do navbar. */
-  text: string
-}
-
-/**
  * Componente da barra de navegação.
  * @returns O JSX da barra de navegação.
  */
@@ -51,6 +41,15 @@ export default function Navbar(): JSX.Element {
   )
 }
 
+/**
+ * Interface do props do componente Links Navbar.
+ */
+interface LinksNavbarProps {
+  /** O endereço para o link do navbar. */
+  link: string
+  /** O texto exibido no link do navbar. */
+  text: string
+}
 /**
  * Componente dos links do navbar.
  */
