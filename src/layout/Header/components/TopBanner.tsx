@@ -10,7 +10,7 @@ import styles from "./TopBanner.module.css"
  */
 export default function TopBanner(): JSX.Element {
   return (
-    <div className={`pd-container ${styles.topBanner}`}>
+    <aside className={`pd-container ${styles.topBanner}`}>
       {/* Texto do banner */}
       <p>
         Não perca as novidades!{" "}
@@ -21,6 +21,6 @@ export default function TopBanner(): JSX.Element {
 
       {/* Ícone */}
       <RedirectIcon />
-    </div>
+    </aside>
   )
 }
