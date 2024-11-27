@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* Estilos do Footer Legal */
+
+.footerLegal {
+}
+
+/* Links de redes sociais no footer */
+.socialMediaLinks {
+  /* layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 14px;
+
+  /* Ícones svgs */
+  & svg {
+    color: var(--white);
+    /* Dimensões */
+    width: 20px;
+    height: 20px;
+
+    /* Efeito hover */
+    transition: color 0.5s;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}

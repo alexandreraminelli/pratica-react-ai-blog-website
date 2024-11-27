@@ -2,6 +2,7 @@
 
 /* importação de componentes */
 import FooterNavigation from "./FooterNavigation/FooterNavigation"
+import FooterLegal from "./FooterLegal/FooterLegal"
 
 /* módulos CSS */
 import styles from "./Footer.module.css"
@@ -16,6 +17,7 @@ export default function Footer(): JSX.Element {
       <FooterNavigation />
 
       {/* Footer legal */}
+      <FooterLegal />
     </footer>
   )
 }
