@@ -20,9 +20,16 @@
   /* Lista principal */
   & > ul {
     /* Layout */
+    display: grid;
+    gap: 1.25rem;
 
     /* Lista interna */
     & > li {
+      /* Layout */
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
       /* Links de páginas */
       & > a {
         /* Tipografia */
@@ -36,6 +43,11 @@
 
       /* Sub-listas */
       & > ul {
+        /* Layout */
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
         /* Links de seções */
         & > li > a {
           /* Tipografia */
