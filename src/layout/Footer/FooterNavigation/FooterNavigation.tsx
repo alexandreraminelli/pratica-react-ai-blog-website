@@ -96,7 +96,7 @@ export default function FooterNavigation(): JSX.Element {
 
 /**
  * A lista de links do Footer Navigation.
- * O JSX é gerado a partir dos objetos JSON presentas no Array do prop list.
+ * O JSX é gerado a partir dos objetos JSON presentes no Array do prop list.
  * @param list - O Array de objetos JSON de links.
  */
 function FooterNavLinkList({ list }: { list: linksListInterface[] }): JSX.Element {
@@ -112,20 +112,31 @@ function FooterNavLinkList({ list }: { list: linksListInterface[] }): JSX.Elemen
             link={group.link} // Link da página
           />
 
-          {/* Sub-lista com os links das seções */}
-          <ul>
-            {/* Percorrer o Array de JSON em sections */}
-            {group.sections.map((section) => (
-              <li key={section.sectionId}>
-                <LinkFooterNav
-                  text={section.title} // Título da seção
-                  link={
-                    `${group.link}#${section.sectionId}` // Link pra seção (/linkPagina#idSeção)
-                  }
-                />
-              </li>
-            ))}
-          </ul>
+          {/* Sub-lista  */}
+          <SectionLinkGroup group={group} />
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+/**
+ * Componente da sub-lista do navigation.
+ * Gera a sub-lista do navigation com os links das seções de cada página do site.
+ * @param group - O objeto JSON com as informações do link de uma página.
+ */
+function SectionLinkGroup({ group }: { group: linksListInterface }): JSX.Element {
+  return (
+    <ul>
+      {/* Percorrer o Array de JSON em sections */}
+      {group.sections.map((section) => (
+        <li key={section.sectionId}>
+          <LinkFooterNav
+            text={section.title} // Título da seção
+            link={
+              `${group.link}#${section.sectionId}` // Link pra seção (/linkPagina#idSeção)
+            }
+          />
         </li>
       ))}
     </ul>
