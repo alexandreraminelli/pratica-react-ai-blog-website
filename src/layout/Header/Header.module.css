@@ -16,6 +16,10 @@ header.siteHeader {
   justify-content: space-between;
   align-items: center;
 
+  /* Sticky */
+  position: sticky;
+  top: 0;
+
   /* Imagem da logo */
   & .logo {
     /* Dimensões */
