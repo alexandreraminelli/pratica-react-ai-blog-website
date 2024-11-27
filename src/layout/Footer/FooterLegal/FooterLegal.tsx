@@ -1,4 +1,7 @@
+/* importação de dependências */
+import { Link } from "react-router-dom"
 /* importação de componentes de ícones SVG */
+
 import SocialMedia1 from "../../../components/icons/socialMediaIcons/SocialMedia1"
 import SocialMedia2 from "../../../components/icons/socialMediaIcons/SocialMedia2"
 import SocialMedia3 from "../../../components/icons/socialMediaIcons/SocialMedia3"
@@ -14,6 +17,20 @@ export default function FooterLegal(): JSX.Element {
     <div className={styles.footerLegal}>
       {/* Links de redes sociais */}
       <SocialMediaLinks />
+
+      {/* Links legais */}
+      <p className={styles.legalLinks}>
+        <Link to="/termos-e-condicoes" className="no-recolor no-underline">
+          Termos e Condições
+        </Link>{" "}
+        |{" "}
+        <Link to="politica-de-privacidade" className="no-recolor no-underline">
+          Política de Privacidade
+        </Link>
+      </p>
+
+      {/* Copyright */}
+      <p className={styles.copyright}>&copy; 2024 FutureTech. Todos os direitos reservados.</p>
     </div>
   )
 }
