@@ -16,6 +16,8 @@
   /* Cor letra cinza */
   --gray-letter1: var(--gray50);
   --gray-letter2: var(--gray60);
+  /* Cor letra dark */
+  --dark-letter1: var(--dark40);
   /* Cor letra preta */
   --black-letter: var(--black);
 }

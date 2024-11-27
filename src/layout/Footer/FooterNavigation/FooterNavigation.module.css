@@ -4,4 +4,35 @@
 .FooterNav {
   /* Espaçamento */
   padding-block: 40px;
+
+  /* Listas no Footer */
+  & ul {
+    /* Remover marcador */
+    list-style-type: none;
+    /* Remover padding pré-definido de listas */
+    padding-inline-start: 0;
+  }
+
+  /* Lista principal */
+  & > ul {
+    /* Layout */
+
+    /* Lista interna */
+    & > li {
+      /* Links de páginas */
+      & > a {
+        /* Tipografia */
+        color: var(--white-letter);
+      }
+
+      /* Sub-listas */
+      & > ul {
+        /* Links de seções */
+        & > li > a {
+          /* Tipografia */
+          color: var(--dark-letter1);
+        }
+      }
+    }
+  }
 }

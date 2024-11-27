@@ -99,6 +99,7 @@ function LinkFooterNav({ text, link }: LinkFooterNavProps): JSX.Element {
   return (
     <Link
       to={link} // endereço do link
+      className="no-underline" // classes CSS personalizadas
     >
       {/* Texto do link */}
       {text}
