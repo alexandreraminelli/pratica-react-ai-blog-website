@@ -22,6 +22,8 @@
     /* Layout */
     display: grid;
     gap: 1.25rem;
+    /* Quantidade de colunas: definidas automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 
     /* Lista interna */
     & > li {
