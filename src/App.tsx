@@ -43,6 +43,8 @@ export default function App(): JSX.Element {
         </Routes>
       </BrowserRouter>
 
+      {/* CTA */}
+
       {/* Footer */}
       <Footer />
     </>

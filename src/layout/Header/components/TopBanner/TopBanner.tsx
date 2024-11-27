@@ -1,7 +1,7 @@
 /* importação de dependências */
 import { Link } from "react-router-dom"
 /* Ícones SVGs */
-import RedirectIcon from "../../../components/icons/RedirectIcon"
+import RedirectIcon from "../../../../components/icons/RedirectIcon" // ícone de redirecionamento
 /* Módulos CSS */
 import styles from "./TopBanner.module.css"
 

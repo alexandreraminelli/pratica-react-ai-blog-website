@@ -1,14 +1,16 @@
+/* importação de dependências */
 import { useEffect, useState } from "react" // estados de uso
 import { Link, useLocation } from "react-router-dom" // hook useLocation
 
 /* importação de componentes */
-import MenuIcon from "./MenuIcon" // ícone SVG de menu
-import CloseIcon from "../../../components/icons/CloseIcon" //ícone SVG de fechar (X)
-import IconButton from "../../../components/Buttons/IconButton/IconButton" // botão de ícone
+import IconButton from "../../../../components/Buttons/IconButton/IconButton" // botão de ícone
+/* ícones SVGs */
+import MenuIcon from "./MenuIcon" // ícone de menu hambúrguer
+import CloseIcon from "../../../../components/icons/CloseIcon" //ícone de fechar (X)
 
 /* importação de módulos CSS */
 import styles from "./Navbar.module.css"
-import styleButton from "../../../components/Buttons/PrimaryButton/PrimaryButton.module.css"
+import styleButton from "../../../../components/Buttons/PrimaryButton/PrimaryButton.module.css"
 
 /**
  * Componente da barra de navegação.

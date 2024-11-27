@@ -1,8 +1,8 @@
 /* Header (cabeçalho) do site */
 
 /* Importação de componentes */
-import Navbar from "./components/Navbar" // barra de navegação
-import TopBanner from "./components/TopBanner" // banner superior
+import Navbar from "./components/Navbar/Navbar" // barra de navegação
+import TopBanner from "./components/TopBanner/TopBanner" // banner no topo
 
 /* Importação de estilos CSS */
 import styles from "./Header.module.css"
