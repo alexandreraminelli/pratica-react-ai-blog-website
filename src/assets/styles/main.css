@@ -8,7 +8,9 @@
 @import url("base/colors.css");
 
 /* Tipografia */
-@import url("base/typography.css");
+@import url("base/typography/typography.css"); /* tipografia geral (todas as telas) */
+@import url("base/typography/typography-mobile.css"); /* tipografia mobile */
+@import url("base/typography/typography-desktop.css") screen and (min-width: 1024px); /* tipografia desktop */
 
 /* Background */
 @import url("base/background.css");

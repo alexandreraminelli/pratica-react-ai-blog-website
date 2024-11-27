@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Estilos de tipografia usados no site */
+/* Estilos gerais de tipografia usados no site */
 
 /* Importação do Google Fonts: Kumbh Sans */
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
@@ -34,6 +34,19 @@ h1,
 h2,
 h3 {
   font-family: var(--heading-font);
+}
+
+/* Parágrafos */
+p {
+  /* Variações de cores */
+  /* cinza 1 */
+  &.gray1 {
+    color: var(--gray-letter1);
+  }
+  /* cinza 2 */
+  &.gray2 {
+    color: var(--gray-letter2);
+  }
 }
 
 /* Links (âncoras) */
