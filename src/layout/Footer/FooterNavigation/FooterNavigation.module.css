@@ -12,6 +12,10 @@
     /* Remover padding pré-definido de listas */
     padding-inline-start: 0;
   }
+  /* Links */
+  & a {
+    transition: color 0.5s ease;
+  }
 
   /* Lista principal */
   & > ul {
@@ -23,6 +27,11 @@
       & > a {
         /* Tipografia */
         color: var(--white-letter);
+
+        /* Efeito hover */
+        &:hover {
+          color: var(--primary-color);
+        }
       }
 
       /* Sub-listas */
@@ -31,6 +40,11 @@
         & > li > a {
           /* Tipografia */
           color: var(--dark-letter1);
+
+          /* Efeito hover */
+          &:hover {
+            color: var(--white-letter);
+          }
         }
       }
     }
