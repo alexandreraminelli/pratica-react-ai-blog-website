@@ -89,9 +89,46 @@ export default function FooterNavigation(): JSX.Element {
   /* Retorno JSX */
   return (
     <nav className={styles.FooterNav} aria-label="Navegação do rodapé">
-      {/* Lista de links */}
-      <ul>{/* <LinkGroup pageLink={linksList} /> */}</ul>
+      <FooterNavLinkList list={linksList} />
     </nav>
+  )
+}
+
+/**
+ * A lista de links do Footer Navigation.
+ * O JSX é gerado a partir dos objetos JSON presentas no Array do prop list.
+ * @param list - O Array de objetos JSON de links.
+ */
+function FooterNavLinkList({ list }: { list: linksListInterface[] }): JSX.Element {
+  /* Retorno JSX */
+  return (
+    <ul>
+      {/* Percorrer o prop list */}
+      {list.map((group) => (
+        <li key={group.link}>
+          {/* Link da página */}
+          <LinkFooterNav
+            text={group.title} // Título da página
+            link={group.link} // Link da página
+          />
+
+          {/* Sub-lista com os links das seções */}
+          <ul>
+            {/* Percorrer o Array de JSON em sections */}
+            {group.sections.map((section) => (
+              <li key={section.sectionId}>
+                <LinkFooterNav
+                  text={section.title} // Título da seção
+                  link={
+                    `${group.link}#${section.sectionId}` // Link pra seção (/linkPagina#idSeção)
+                  }
+                />
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
   )
 }
 
@@ -107,35 +144,11 @@ interface LinkFooterNavProps {
  */
 function LinkFooterNav({ text, link }: LinkFooterNavProps): JSX.Element {
   return (
-    <li>
-      <Link
-        to={link} // endereço do link
-      >
-        {/* Texto do link */}
-        {text}
-      </Link>
-    </li>
-  )
-}
-
-/**
- * Interface dos props do componente LinkGroup.
- */
-interface LinkGroupProps {
-  /** Link da página do grupo. */
-  pageLink: LinkFooterNavProps
-}
-
-/**
- * Componente de grupo de links do FooterNavigation.
- */
-function LinkGroup({ pageLink }: LinkGroupProps): JSX.Element {
-  return (
-    <li>
-      {/* Link da página principal */}
-      <LinkFooterNav text={pageLink.text} link={pageLink.link} />
-
-      {/*  */}
-    </li>
+    <Link
+      to={link} // endereço do link
+    >
+      {/* Texto do link */}
+      {text}
+    </Link>
   )
 }
