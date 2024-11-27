@@ -2,7 +2,6 @@
 
 /* Importação de componentes */
 import Navbar from "./components/Navbar/Navbar" // barra de navegação
-import TopBanner from "./components/TopBanner/TopBanner" // banner no topo
 
 /* Importação de estilos CSS */
 import styles from "./Header.module.css"
@@ -16,18 +15,12 @@ import logo from "../../assets/images/logo/logo-inline.svg"
  */
 export default function Header(): JSX.Element {
   return (
-    <>
-      {/* Top Banner */}
-      <TopBanner />
+    <header className={`pd-container ${styles.siteHeader}`}>
+      {/* Logo do site */}
+      <img className={`${styles.logo}`} src={logo} alt="Logo da Future Tech" />
 
-      {/* Header Principal */}
-      <header className={`pd-container ${styles.siteHeader}`}>
-        {/* Logo do site */}
-        <img className={`${styles.logo}`} src={logo} alt="Logo da Future Tech" />
-
-        {/* Navbar */}
-        <Navbar />
-      </header>
-    </>
+      {/* Navbar */}
+      <Navbar />
+    </header>
   )
 }

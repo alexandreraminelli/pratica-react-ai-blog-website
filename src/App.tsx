@@ -9,6 +9,7 @@ import Contact from "./pages/Contact"
 import NotFound from "./pages/NotFound"
 
 /* Importação de Componentes */
+import TopBanner from "./layout/TopBanner/TopBanner" // banner superior
 import Header from "./layout/Header/Header" // cabeçalho
 import Footer from "./layout/Footer/Footer" // rodapé
 
@@ -20,8 +21,10 @@ export default function App(): JSX.Element {
   // Retorno JSX
   return (
     <>
-      {/* Corpo da página */}
       <BrowserRouter>
+        {/* Top Banner */}
+        <TopBanner />
+
         {/* Header */}
         <Header />
 
@@ -41,12 +44,12 @@ export default function App(): JSX.Element {
           {/* Página 404 (Not Found) */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+
+        {/* CTA */}
+
+        {/* Footer */}
+        <Footer />
       </BrowserRouter>
-
-      {/* CTA */}
-
-      {/* Footer */}
-      <Footer />
     </>
   )
 }
