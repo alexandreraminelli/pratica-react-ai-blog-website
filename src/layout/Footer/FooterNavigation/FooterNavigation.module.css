@@ -34,6 +34,7 @@
       & > a {
         /* Tipografia */
         color: var(--white-letter);
+        font-size: 1rem; /* 16px */
 
         /* Efeito hover */
         &:hover {
@@ -52,6 +53,7 @@
         & > li > a {
           /* Tipografia */
           color: var(--dark-letter1);
+          font-size: 0.875rem; /* 14px */
 
           /* Efeito hover */
           &:hover {
