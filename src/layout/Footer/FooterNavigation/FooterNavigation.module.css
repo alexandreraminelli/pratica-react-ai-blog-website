@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* Estilos do FooterNavigation */
+
+.FooterNav {
+  /* Espaçamento */
+  padding-block: 40px;
+
+  /* Listas no Footer */
+  & ul {
+    /* Remover marcador */
+    list-style-type: none;
+    /* Remover padding pré-definido de listas */
+    padding-inline-start: 0;
+  }
+  /* Links */
+  & a {
+    transition: color 0.5s ease;
+  }
+
+  /* Lista principal */
+  & > ul {
+    /* Layout */
+    display: grid;
+    gap: 1.25rem;
+    /* Quantidade de colunas: definidas automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+    /* Lista interna */
+    & > li {
+      /* Layout */
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      /* Links de páginas */
+      & > a {
+        /* Tipografia */
+        color: var(--white-letter);
+        font-size: 1rem; /* 16px */
+
+        /* Efeito hover */
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+
+      /* Sub-listas */
+      & > ul {
+        /* Layout */
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        /* Links de seções */
+        & > li > a {
+          /* Tipografia */
+          color: var(--dark-letter1);
+          font-size: 0.875rem; /* 14px */
+
+          /* Efeito hover */
+          &:hover {
+            color: var(--white-letter);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .FooterNav > ul > li {
+    /* Links de páginas */
+    & > a {
+      font-size: 1.125rem; /* 18px */
+    }
+    /* Links de seções */
+    & > ul > li > a {
+      font-size: 1rem; /* 16px */
+    }
+  }
+}

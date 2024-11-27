@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* Estilos do Footer */
+
+footer.siteFooter {
+  /* Borda */
+  border-top: var(--border01);
+}

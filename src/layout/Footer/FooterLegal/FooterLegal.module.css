@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* Estilos do Footer Legal */
+
+.footerLegal {
+  /* Layout */
+  display: grid;
+  grid-template-rows: auto auto auto;
+
+  /* Espaçamento */
+  gap: 20px;
+  padding-block: 24px;
+
+  /* Alinhamento */
+  justify-content: center;
+  text-align: center;
+
+  /* Borda */
+  border-top: var(--border01);
+
+  /* Tipografia */
+  color: var(--dark40);
+
+  /* Eliminar espaçamento de parágrafos */
+  & p {
+    margin: 0;
+  }
+
+  /* Efeito hover nos links */
+  & a {
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: var(--white-letter);
+    }
+  }
+}
+
+/* Links de redes sociais no footer */
+.socialMediaLinks {
+  /* layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+
+  /* Ícones svgs */
+  & svg {
+    color: var(--white);
+    /* Dimensões */
+    width: 20px;
+    height: 20px;
+
+    /* Efeito hover */
+    transition: color 0.5s;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 800px) {
+  .footerLegal {
+    /* Layout */
+    justify-content: space-between;
+    /* Definir áreas */
+    grid-template-areas: "legalLinks socialMediaLinks copyright";
+
+    /* Ordenar os elementos filhos */
+    & .legalLinks {
+      grid-area: legalLinks;
+      text-align: start;
+    }
+    & .socialMediaLinks {
+      grid-area: socialMediaLinks;
+    }
+    & .copyright {
+      grid-area: copyright;
+      text-align: end;
+    }
+  }
+}
