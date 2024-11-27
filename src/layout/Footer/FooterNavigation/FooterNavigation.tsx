@@ -8,15 +8,23 @@ import styles from "./FooterNavigation.module.css"
  * Componente da seção de navegação do rodapé.
  */
 export default function FooterNavigation(): JSX.Element {
+  // Objeto com os links do Footer Navigation
+  const linksList = {
+    text: "contato",
+    link: "/contato",
+  }
+
   return (
     <nav className={styles.FooterNav} aria-label="Navegação do rodapé">
       {/* Lista de links */}
-      <ul></ul>
+      <ul>
+        <LinkGroup pageLink={linksList} />
+      </ul>
     </nav>
   )
 }
 
-/** Interface de link */
+/** Interface dos props do componente LinkFooterNav */
 interface LinkFooterNavProps {
   /** Texto exibido na UI */
   text: string
@@ -24,7 +32,7 @@ interface LinkFooterNavProps {
   link: string
 }
 /**
- *
+ * Componente do link do Footer Navigation
  */
 function LinkFooterNav({ text, link }: LinkFooterNavProps): JSX.Element {
   return (
@@ -40,16 +48,23 @@ function LinkFooterNav({ text, link }: LinkFooterNavProps): JSX.Element {
 }
 
 /**
- * Interface dos props do LinkGroup
+ * Interface dos props do componente LinkGroup.
  */
 interface LinkGroupProps {
-  /** Link da página do grupo */
-  linkPagina: LinkFooterNavProps
+  /** Link da página do grupo. */
+  pageLink: LinkFooterNavProps
 }
 
 /**
  * Componente de grupo de links do FooterNavigation.
  */
-function LinkGroup(): JSX.Element {
-  return <li>{/* Link da página */}</li>
+function LinkGroup({ pageLink }: LinkGroupProps): JSX.Element {
+  return (
+    <li>
+      {/* Link da página principal */}
+      <LinkFooterNav text={pageLink.text} link={pageLink.link} />
+
+      {/*  */}
+    </li>
+  )
 }
