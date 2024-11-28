@@ -7,7 +7,7 @@ import styles from "./ButtonWithIcon.module.css"
 /**
  * Interface do props do componente ButtonWithIcon.
  */
-interface ButtonWithIconProps {
+export interface ButtonWithIconProps {
   /** O texto exibido no botão. */
   text: string
   /** Componente SVG do ícone exibido no botão. */
