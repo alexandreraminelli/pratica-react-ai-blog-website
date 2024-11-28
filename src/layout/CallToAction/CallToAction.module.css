@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* Estilos do Call To Action */
+
+.callToAction {
+  /* Background */
+  background-color: var(--background-secondary);
+  /* Borda superior */
+  border-top: var(--border01);
+
+  /* Espaçamento */
+  padding-block: 40px;
+  gap: 40px;
+}
+
