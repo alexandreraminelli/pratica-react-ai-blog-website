@@ -34,10 +34,10 @@ function HeadlineCTA(): JSX.Element {
       <h2>Faça parte da revolução tecnológica do futuro</h2>
 
       {/* Texto mobile */}
-      <p>Mergulhe no mundo da tecnologia do futuro. Explore nossos recursos abrangentes.</p>
+      <p className={styles.mobileText}>Mergulhe no mundo da tecnologia do futuro. Explore nossos recursos abrangentes.</p>
 
       {/* Texto desktop */}
-      <p>Mergulhe no mundo da tecnologia do futuro. Explore nossos recursos abrangentes, conecte-se com outros entusiastas da tecnologia e impulsione a inovação no setor. Junte-se a uma comunidade dinâmica de pensadores visionários.</p>
+      <p className={styles.desktopText}>Mergulhe no mundo da tecnologia do futuro. Explore nossos recursos abrangentes, conecte-se com outros entusiastas da tecnologia e impulsione a inovação no setor. Junte-se a uma comunidade dinâmica de pensadores visionários.</p>
     </header>
   )
 }

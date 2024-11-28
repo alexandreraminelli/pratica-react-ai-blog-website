@@ -30,3 +30,16 @@
     width: 60px;
   }
 }
+
+/* Responsividade do texto */
+@media screen and (max-width: 1023px) {
+  .desktopText {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobileText {
+    display: none;
+  }
+}
