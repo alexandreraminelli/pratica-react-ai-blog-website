@@ -52,6 +52,7 @@
       { "title": "Ebooks", "sectionId": "ebooks" },
       { "title": "Relatórios", "sectionId": "relatorios" },
       { "title": "Artigos de Pesquisa", "sectionId": "artigos-de-pesquisa" }
-    ]
+    ],
+    "buttons": true
   }
 ]

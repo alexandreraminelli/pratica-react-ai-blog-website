@@ -1,6 +1,9 @@
 /* importação de dependências */
 import { Link } from "react-router-dom"
 
+/* importação de componentes */
+import RedirectButton from "../../../components/Buttons/RedirectButton/RedirectButton"
+
 /* importação do JSON com os links do navbar */
 import linksList from "../../../data/NavLinks/footerNavLinks.json"
 
@@ -22,6 +25,9 @@ interface linksListInterface {
     /** O ID da seção (sem o '#'). */
     sectionId: string
   }[]
+
+  /** Se os links das seções devem estar estilizados como botões de redirecionamento. (opcional) */
+  buttons?: boolean
 }
 
 /**
@@ -68,28 +74,51 @@ function FooterNavLinkList({ list }: { list: linksListInterface[] }): JSX.Elemen
  * @param group - O objeto JSON com as informações do link de uma página.
  */
 function SectionLinkGroup({ group }: { group: linksListInterface }): JSX.Element {
-  return (
-    <ul>
-      {/* Percorrer o Array de JSON em sections */}
-      {group.sections.map((section) => (
-        <li key={section.sectionId}>
-          <LinkFooterNav
-            text={section.title} // Título da seção
-            link={
-              `${group.link}#${section.sectionId}` // Link pra seção (/linkPagina#idSeção)
-            }
-          />
-        </li>
-      ))}
-    </ul>
-  )
+  if (!group.buttons) {
+    /* Retornar lista com links normais */
+    return (
+      <ul>
+        {/* Percorrer o Array de JSON em sections */}
+        {group.sections.map((section) => (
+          <li key={section.sectionId}>
+            <LinkFooterNav
+              text={section.title} // Título da seção
+              link={
+                `${group.link}#${section.sectionId}` // Link pra seção (/linkPagina#idSeção)
+              }
+            />
+          </li>
+        ))}
+      </ul>
+    )
+  } else {
+    /* Retornar lista com links estilizados como botões */
+    return (
+      <ul className={styles.redirectButton}>
+        {/* Percorrer o Array de JSON em sections */}
+        {group.sections.map((section) => (
+          <li key={section.sectionId}>
+            {/* Botão de redirecionamento */}
+            <RedirectButton
+              text={section.title} // Título da seção
+              link={
+                `${group.link}#${section.sectionId}` // Link pra seção (/linkPagina#idSeção)
+              }
+              darkBackground // background mais escuro no botão
+              className={styles.redirectButton} // classe CSS de botão de redirecionamento
+            />
+          </li>
+        ))}
+      </ul>
+    )
+  }
 }
 
 /** Interface dos props do componente LinkFooterNav */
 interface LinkFooterNavProps {
-  /** Texto exibido na UI */
+  /** Texto exibido na UI. */
   text: string
-  /** Link do endpoint pra página */
+  /** Link do endpoint pra página. */
   link: string
 }
 /**
