@@ -15,4 +15,14 @@
 
   /* Tipografia */
   font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  line-height: 150%;
+}
+
+/* Tablet e Desktop */
+@media screen and (min-width: 768px) {
+  .badge {
+    /* Aumentar fonte */
+    font-size: 1rem; /* 16px */
+  }
 }
