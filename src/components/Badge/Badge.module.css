@@ -6,8 +6,12 @@
   background-color: var(--background-gray);
   /* Cantos arredondados */
   border-radius: 4px;
+
   /* Espaçamento */
   padding: 4px 8px;
+  /* Altura (evitar conflitos) */
+  height: fit-content;
+  width: fit-content;
 
   /* Tipografia */
   font-size: 0.875rem; /* 14px */
