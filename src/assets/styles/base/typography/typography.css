@@ -37,6 +37,10 @@ h2,
 h3 {
   font-family: var(--heading-font);
 }
+h2 {
+  font-weight: 600;
+  line-height: 130%;
+}
 
 /* Parágrafos */
 p {
