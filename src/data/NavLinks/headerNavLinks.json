@@ -1,0 +1,7 @@
+[
+  { "title": "Início", "link": "/" },
+  { "title": "Notícias", "link": "/noticias" },
+  { "title": "Podcasts", "link": "/podcasts" },
+  { "title": "Recursos", "link": "/recursos" },
+  { "title": "Entre em Contato", "link": "/contato", "button": true }
+]

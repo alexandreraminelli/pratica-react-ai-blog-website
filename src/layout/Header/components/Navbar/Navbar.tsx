@@ -2,6 +2,9 @@
 import { useEffect, useState } from "react" // estados de uso
 import { Link, useLocation } from "react-router-dom" // hook useLocation
 
+/* JSON com a lista de links */
+import linkList from "../../../../data/NavLinks/headerNavLinks.json"
+
 /* importação de componentes */
 import IconButton from "../../../../components/Buttons/IconButton/IconButton" // botão de ícone
 /* ícones SVGs */
@@ -10,7 +13,7 @@ import CloseIcon from "../../../../components/icons/CloseIcon" //ícone de fecha
 
 /* importação de módulos CSS */
 import styles from "./Navbar.module.css"
-import styleButton from "../../../../components/Buttons/PrimaryButton/PrimaryButton.module.css"
+import styleButton from "../../../../components/Buttons/FeaturedButton/FeaturedButton.module.css"
 
 /**
  * Componente da barra de navegação.
@@ -44,11 +47,12 @@ export default function Navbar(): JSX.Element {
 
         {/* Lista de links do Navbar */}
         <ul>
-          <LinkNavbar link="/" text="Início" />
-          <LinkNavbar link="/noticias" text="Notícias" />
-          <LinkNavbar link="/podcasts" text="Podcasts" />
-          <LinkNavbar link="/recursos" text="Recursos" />
-          <LinkNavbar link="/contato" text="Entre em Contato" button />
+          {/* Percorrer a lista de objetos para gerar os links */}
+          {linkList.map((link) => (
+            <>
+              <LinkNavbar text={link.title} link={link.link} button={link.button} />
+            </>
+          ))}
         </ul>
       </nav>
 
@@ -84,7 +88,7 @@ function LinkNavbar({ link, text, button }: LinksNavbarProps): JSX.Element {
         to={link} // endereço do link
         // classes CSS:
         className={`no-recolor no-underline 
-          ${button ? styleButton.primaryButton : ""}
+          ${button ? styleButton.featuredButton : ""}
           ${isCurrentPage ? styles.linkAtual : ""}`}
       >
         {text} {/* Texto do link */}

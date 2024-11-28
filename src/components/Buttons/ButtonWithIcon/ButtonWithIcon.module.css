@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* Estilos dos botões com ícones */
+
+.buttonIcon {
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* Espaçamento */
+  gap: 4px;
+  padding: 14px 20px;
+  /* Dimensões */
+  width: fit-content;
+
+  /* Background */
+  background-color: var(--background-secondary);
+  /* Bordas */
+  border-radius: 6px;
+  border: var(--border01);
+
+  /* Tipografia */
+  color: var(--gray-letter2);
+  font-size: 0.875rem; /* 14px */
+  text-decoration: none;
+  text-wrap: nowrap;
+
+  /* Ícone SVG */
+  & svg {
+    color: var(--primary-color);
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Efeito hover */
+  transition-property: border-color, color;
+  transition-duration: 0.5s;
+  &:hover {
+    color: var(--white-letter);
+    border-color: var(--primary-color);
+  }
+
+  /* Variações */
+  /* Sem background */
+  &.darkBackground {
+    /* background-color: var(--background-primary); */
+    background-color: var(--dark08);
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+  .buttonIcon {
+    /* Aumentar espaçamento */
+    padding: 18px 24px;
+    gap: 10px;
+    /* Aumentar fonte */
+    font-size: 1.125rem; /* 18px */
+    /* Aumentar ícone */
+    & svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

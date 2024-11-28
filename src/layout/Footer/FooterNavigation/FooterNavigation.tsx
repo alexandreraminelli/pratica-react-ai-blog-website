@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom"
 
 /* importação do JSON com os links do navbar */
-import linksList from "../../../data/footerNavLinks.json"
+import linksList from "../../../data/NavLinks/footerNavLinks.json"
 
 /* módulos CSS */
 import styles from "./FooterNavigation.module.css"

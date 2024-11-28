@@ -1,7 +1,7 @@
 @charset "UTF-8";
-/* Estilos para botão primário */
+/* Estilos para botão em destaque (que possui a cor primária) */
 
-.primaryButton {
+.featuredButton {
   /* Resolver conflitos de estilos */
   /* Bordas */
   border: none !important;
