@@ -12,3 +12,21 @@
   gap: 40px;
 }
 
+/* Linha do Badge */
+.badgeLine {
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+
+  /* Espaçamento */
+  gap: 20px;
+
+  /* Imagem */
+  & img {
+    /* Dimensões */
+    height: 60px;
+    width: 60px;
+  }
+}
