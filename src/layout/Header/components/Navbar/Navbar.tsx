@@ -10,7 +10,7 @@ import CloseIcon from "../../../../components/icons/CloseIcon" //ícone de fecha
 
 /* importação de módulos CSS */
 import styles from "./Navbar.module.css"
-import styleButton from "../../../../components/Buttons/PrimaryButton/PrimaryButton.module.css"
+import styleButton from "../../../../components/Buttons/FeaturedButton/FeaturedButton.module.css"
 
 /**
  * Componente da barra de navegação.
@@ -84,7 +84,7 @@ function LinkNavbar({ link, text, button }: LinksNavbarProps): JSX.Element {
         to={link} // endereço do link
         // classes CSS:
         className={`no-recolor no-underline 
-          ${button ? styleButton.primaryButton : ""}
+          ${button ? styleButton.featuredButton : ""}
           ${isCurrentPage ? styles.linkAtual : ""}`}
       >
         {text} {/* Texto do link */}
