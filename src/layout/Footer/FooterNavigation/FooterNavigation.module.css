@@ -100,9 +100,9 @@
       font-size: 1.125rem; /* 18px */
     }
 
-    & > ul > li {
+    & > ul {
       /* Links de seções */
-      & > a {
+      & > li > a {
         font-size: 1rem; /* 16px */
       }
 
