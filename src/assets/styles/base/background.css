@@ -9,6 +9,9 @@
   --background-secondary: var(--dark10);
   /* Background terciário */
   --background-tertiary: var(--dark15);
+
+  /* Background cinza */
+  --background-gray: var(--dark20);
 }
 
 body {
