@@ -99,9 +99,33 @@
     & > a {
       font-size: 1.125rem; /* 18px */
     }
-    /* Links de seções */
-    & > ul > li > a {
-      font-size: 1rem; /* 16px */
+
+    & > ul > li {
+      /* Links de seções */
+      & > a {
+        font-size: 1rem; /* 16px */
+      }
+
+      /* Listas de botões de redirecionamento */
+      &.redirectButton {
+        gap: 12px;
+      }
+    }
+
+    /* Lista com botões de redirecionamento */
+    &:has(.redirectButton) {
+      /* Ocupar apenas 1 coluna */
+      grid-column: span 1;
+    }
+  }
+}
+
+/* Responsividade nas listas de botões de redirecionamento */
+@media screen and (min-width: 609px) and (max-width: 1023px) {
+  .FooterNav > ul > li {
+    &:has(.redirectButton) {
+      /* Ocupar toda a linha do grid quando houver 2 colunas */
+      grid-column: span 4;
     }
   }
 }
