@@ -2,7 +2,8 @@
 import { Link } from "react-router-dom"
 
 /* importação de componentes */
-import RedirectButton from "../../../components/Buttons/RedirectButton/RedirectButton"
+import RedirectButton from "../../../components/Buttons/RedirectButton/RedirectButton" // botão de redirecionamento
+import NoveltyBadge from "../../../components/Badge/NoveltyBadge" // badge de novidade
 
 /* importação do JSON com os links do navbar */
 import linksList from "../../../data/NavLinks/footerNavLinks.json"
@@ -24,6 +25,8 @@ interface linksListInterface {
     title: string
     /** O ID da seção (sem o '#'). */
     sectionId: string
+    /** Se a seção é uma novidade. Se for, haverá um label ao seu lado. (opcional) */
+    newBadge?: boolean
   }[]
 
   /** Se os links das seções devem estar estilizados como botões de redirecionamento. (opcional) */
@@ -86,6 +89,7 @@ function SectionLinkGroup({ group }: { group: linksListInterface }): JSX.Element
               link={
                 `${group.link}#${section.sectionId}` // Link pra seção (/linkPagina#idSeção)
               }
+              newBadge={section.newBadge} // se deve ou não exibir um badge de "New"
             />
           </li>
         ))}
@@ -120,11 +124,13 @@ interface LinkFooterNavProps {
   text: string
   /** Link do endpoint pra página. */
   link: string
+  /** Se a seção é uma novidade. Se for, exibe um badge ao lado. (opcional) */
+  newBadge?: boolean
 }
 /**
  * Componente do link do Footer Navigation
  */
-function LinkFooterNav({ text, link }: LinkFooterNavProps): JSX.Element {
+function LinkFooterNav({ text, link, newBadge }: LinkFooterNavProps): JSX.Element {
   return (
     <Link
       to={link} // endereço do link
@@ -132,6 +138,8 @@ function LinkFooterNav({ text, link }: LinkFooterNavProps): JSX.Element {
     >
       {/* Texto do link */}
       {text}
+
+      {newBadge ? <NoveltyBadge /> : ""}
     </Link>
   )
 }

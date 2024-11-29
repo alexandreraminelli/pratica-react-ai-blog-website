@@ -39,4 +39,7 @@
 
   /* Cor principal */
   --primary-color: var(--yellow55);
+
+  /* Gradientes */
+  --gradient01: linear-gradient(30deg, var(--dark15) 36%, #ffd119 100%);
 }

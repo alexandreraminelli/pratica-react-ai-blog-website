@@ -5,7 +5,7 @@
     "sections": [
       { "title": "Novidades", "sectionId": "novidades" },
       { "title": "Blogs", "sectionId": "blogs" },
-      { "title": "Recursos", "sectionId": "recursos" },
+      { "title": "Recursos", "sectionId": "recursos", "newBadge": true },
       { "title": "Depoimentos", "sectionId": "depoimentos" },
       { "title": "Entre em Contato", "sectionId": "contato" },
       { "title": "Newsletter", "sectionId": "newsletter" }
@@ -30,7 +30,7 @@
       { "title": "Computação Quântica", "sectionId": "computacao-quantica" },
       { "title": "Ética em IA", "sectionId": "etica-em-ia" },
       { "title": "Exploração Espacial", "sectionId": "exploracao-espacial" },
-      { "title": "Biotecnologia", "sectionId": "biotecnologia" },
+      { "title": "Biotecnologia", "sectionId": "biotecnologia", "newBadge": true },
       { "title": "Energias Renováveis", "sectionId": "energias-renovaveis" },
       { "title": "Biohacking", "sectionId": "biohacking" }
     ]
@@ -39,7 +39,7 @@
     "title": "Podcasts",
     "link": "/podcasts",
     "sections": [
-      { "title": "AI Revolution", "sectionId": "ai-revolution" },
+      { "title": "AI Revolution", "sectionId": "ai-revolution", "newBadge": true },
       { "title": "TechTalk AI", "sectionId": "techtalk-ai" },
       { "title": "AI Conversations", "sectionId": "ai-conversations" }
     ]

@@ -57,6 +57,15 @@
           color: var(--dark-letter1);
           font-size: 0.875rem; /* 14px */
 
+          /* Layout */
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          /* Espaçamento */
+          gap: 8px;
+          /* Dimensões */
+          height: fit-content;
+
           /* Efeito hover */
           &:hover {
             color: var(--white-letter);

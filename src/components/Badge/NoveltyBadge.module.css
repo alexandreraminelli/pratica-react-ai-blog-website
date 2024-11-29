@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* Estilos do badge de novidade */
+
+.noveltyBadge {
+  /* Aparência */
+  background-color: var(--background-secondary);
+  border-radius: 3px;
+
+  /* Espaçamento */
+  margin: 1px; /* "largura da borda" */
+  padding: 2px 8px;
+
+  /* Dimensões dentro do container da borda */
+
+  /* Tipografia */
+  font-size: 0.75rem; /* 12px */
+  color: var(--white-letter);
+}
+
+/* Borda gradiente */
+.border {
+  /* Cor */
+  background-image: var(--gradient01);
+
+  /* Cantos arredondados */
+  border-radius: 4px;
+
+  /* Dimensões */
+  width: fit-content;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
