@@ -15,11 +15,17 @@ import data from "../../../data/CTAText/headlineCTA.json"
 export default function HeadlineCTA(): JSX.Element {
   return (
     <header className={styles.headlineCTA}>
-      {/* Linha do Badge */}
-      <BadgeLine />
+      {/* Logo (visível no desktop) */}
+      <LogoHeadlineCTA className={styles.desktopLogo} />
 
-      {/* Título e Texto */}
-      <TitleAndTextHeadline />
+      {/* Coluna com o texto */}
+      <div className={styles.textCol}>
+        {/* Linha do Badge */}
+        <BadgeLine />
+
+        {/* Título e Texto */}
+        <TitleAndTextHeadline />
+      </div>
     </header>
   )
 }
@@ -30,12 +36,17 @@ export default function HeadlineCTA(): JSX.Element {
 function BadgeLine(): JSX.Element {
   return (
     <div className={styles.badgeLine}>
-      {/* Imagem (visível no mobile) */}
-      <img src={logo} alt="Logo da FutureTech" />
+      {/* Logo (visível no mobile) */}
+      <LogoHeadlineCTA className={styles.mobileLogo} />
       {/* Badge */}
       <Badge text={data.slogan} />
     </div>
   )
+}
+
+/** Logo do headline do CTA. */
+function LogoHeadlineCTA({ className }: { className?: string }): JSX.Element {
+  return <img src={logo} alt="Logo da FutureTech" className={className} />
 }
 
 /**
