@@ -68,3 +68,21 @@
     padding: 10px;
   }
 }
+
+/* Redirect Card para desktop */
+@media screen and (min-width: 1024px) {
+  .redirectCard {
+    /* Aumentar espaçamento */
+    padding: 30px;
+    gap: 16px;
+
+    /* Aumentar título */
+    & h3 {
+      font-size: 1.125rem; /* 18px */
+    }
+  }
+  /* Aumentar ícone */
+  .headlineCard svg {
+    padding: 12px;
+  }
+}
