@@ -26,18 +26,12 @@ export default function CallToAction(): JSX.Element {
  */
 function HeadlineCTA(): JSX.Element {
   return (
-    <header>
+    <header className={styles.headlineCTA}>
       {/* Linha do Badge */}
       <BadgeLine />
 
-      {/* Título */}
-      <h2>Faça parte da revolução tecnológica do futuro</h2>
-
-      {/* Texto mobile */}
-      <p className={styles.mobileText}>Mergulhe no mundo da tecnologia do futuro. Explore nossos recursos abrangentes.</p>
-
-      {/* Texto desktop */}
-      <p className={styles.desktopText}>Mergulhe no mundo da tecnologia do futuro. Explore nossos recursos abrangentes, conecte-se com outros entusiastas da tecnologia e impulsione a inovação no setor. Junte-se a uma comunidade dinâmica de pensadores visionários.</p>
+      {/* Título e Texto */}
+      <TitleAndTextHeadline />
     </header>
   )
 }
@@ -53,5 +47,23 @@ function BadgeLine(): JSX.Element {
       {/* Badge */}
       <Badge text="Aprenda, Conecte-se, Inove" />
     </div>
+  )
+}
+
+/**
+ * Título e texto do headline do CTA.
+ */
+function TitleAndTextHeadline(): JSX.Element {
+  return (
+    <hgroup>
+      {/* Título */}
+      <h2>Faça parte da revolução tecnológica do futuro</h2>
+
+      {/* Texto mobile */}
+      <p className={styles.mobileText}>Mergulhe no mundo da tecnologia do futuro. Explore nossos recursos abrangentes.</p>
+
+      {/* Texto desktop */}
+      <p className={styles.desktopText}>Mergulhe no mundo da tecnologia do futuro. Explore nossos recursos abrangentes, conecte-se com outros entusiastas da tecnologia e impulsione a inovação no setor. Junte-se a uma comunidade dinâmica de pensadores visionários.</p>
+    </hgroup>
   )
 }

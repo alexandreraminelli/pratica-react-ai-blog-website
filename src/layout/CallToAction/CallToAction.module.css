@@ -10,6 +10,32 @@
   /* Espaçamento */
   padding-block: 40px;
   gap: 40px;
+
+  /* Remover margens do título e parágrafos */
+  h2,
+  p {
+    margin: 0;
+  }
+
+  /* Parágrafos */
+  & p {
+    /* Tipografia */
+    color: var(--gray-letter1);
+    font-size: 0.938rem; /* 15px */
+  }
+
+  /* Margem inferior no h2 */
+  & h2 {
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Headline do CTA */
+.headlineCTA {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Linha do Badge */
