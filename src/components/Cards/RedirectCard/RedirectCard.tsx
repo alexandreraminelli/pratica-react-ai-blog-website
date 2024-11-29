@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 /* ícones SVG */
 import RedirectIcon from "../../icons/RedirectIcon"
 /* módulos CSS */
-import styles from "./RedirectCards.module.css"
+import styles from "./RedirectCard.module.css"
 
 /**
  * Interface dos props do componente RedirectCards.
