@@ -6,6 +6,9 @@ import styles from "../CallToAction.module.css"
 /* importação de imagens */
 import logo from "../../../assets/images/logo/logo-favicon.svg"
 
+/* dados do JSON */
+import data from "../../../data/CTAText/headlineCTA.json"
+
 /**
  * Headline do CTA.
  */
@@ -30,7 +33,7 @@ function BadgeLine(): JSX.Element {
       {/* Imagem (visível no mobile) */}
       <img src={logo} alt="Logo da FutureTech" />
       {/* Badge */}
-      <Badge text="Aprenda, Conecte-se, Inove" />
+      <Badge text={data.slogan} />
     </div>
   )
 }
@@ -42,12 +45,12 @@ function TitleAndTextHeadline(): JSX.Element {
   return (
     <hgroup>
       {/* Título */}
-      <h2>Faça parte da revolução tecnológica do futuro</h2>
+      <h2>{data.title}</h2>
 
       {/* Texto mobile */}
-      <p className={styles.mobileText}>Mergulhe no mundo da tecnologia do futuro. Explore nossos recursos abrangentes.</p>
+      <p className={styles.mobileText}>{data.mobileText ? data.mobileText : data.desktopText}</p>
       {/* Texto desktop */}
-      <p className={styles.desktopText}>Mergulhe no mundo da tecnologia do futuro. Explore nossos recursos abrangentes, conecte-se com outros entusiastas da tecnologia e impulsione a inovação no setor. Junte-se a uma comunidade dinâmica de pensadores visionários.</p>
+      <p className={styles.desktopText}>{data.desktopText ? data.desktopText : data.mobileText}</p>
     </hgroup>
   )
 }
