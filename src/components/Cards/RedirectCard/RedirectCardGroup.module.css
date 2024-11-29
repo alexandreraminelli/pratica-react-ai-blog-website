@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* Estilos de listas de cards de redirecionamento */
+
+.cardGroup {
+  /* Aparência */
+  background-color: var(--background-primary);
+  border: var(--border01);
+  border-radius: 15px;
+
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+
+  /* Espaçamento */
+  padding: 10px;
+  gap: 10px;
+
+  /* Transição responsiva */
+  transition-property: padding, gap;
+  transition-duration: 1s;
+
+  /* Filhos terem o mesmo tamanho */
+  & > * {
+    flex: 1;
+  }
+}
+
+/* Card Group para desktop */
+@media screen and (min-width: 880px) {
+  .cardGroup {
+    /* Aumentar espaçamento */
+    padding: 20px;
+    gap: 15px;
+
+    /* Mudar direção */
+    flex-direction: row;
+  }
+}

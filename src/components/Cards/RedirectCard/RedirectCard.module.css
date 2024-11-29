@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* Estilos dos cards de redirecionamento. */
+
+.redirectCard {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  /* Espaçamento */
+  padding: 24px;
+  gap: 12px;
+
+  /* Background */
+  background-color: var(--background-secondary);
+  /* Borda */
+  border: var(--border01);
+  /* Cantos */
+  border-radius: 10px;
+
+  /* Transições (hover e responsividade) */
+  transition: border-color 0.5s ease, padding 1s;
+
+  /* Efeito hover */
+  &:hover {
+    border-color: var(--primary-color);
+    /* Recolorir parágrafo */
+    & p {
+      color: var(--white-letter);
+    }
+  }
+
+  /* Remover espaçamento do texto */
+  & h3,
+  & p {
+    margin: 0;
+  }
+
+  /* Título */
+  & h3 {
+    font-size: 1rem; /* 16px */
+
+    /* Transição */
+    transition: font-size 0.5s;
+  }
+
+  /* Parágrafo */
+  & p {
+    color: var(--gray-letter2);
+    /* Transição */
+    transition: color 0.5s ease, font-size 0.5s;
+  }
+}
+
+/* Headline do Redirect Card */
+.headlineCard {
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Ícone */
+  & svg {
+    /* Dimensões */
+    height: 20px;
+    width: 20px;
+    /* Cor */
+    color: var(--dark08);
+
+    /* Preenchimento */
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    /* Espaçamento */
+    padding: 10px;
+  }
+}
+
+/* Redirect Card para desktop */
+@media screen and (min-width: 1024px) {
+  .redirectCard {
+    /* Aumentar espaçamento */
+    padding: 30px;
+    gap: 16px;
+
+    /* Aumentar título */
+    & h3 {
+      font-size: 1.125rem; /* 18px */
+    }
+  }
+  /* Aumentar ícone */
+  .headlineCard svg {
+    padding: 12px;
+  }
+}

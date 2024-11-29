@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* Estilos do Headline do CTA */
+
+/* Headline do CTA */
+.headlineCTA {
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+
+  /* Remover margens do título e parágrafos */
+  h2,
+  p {
+    margin: 0;
+  }
+
+  /* Parágrafos */
+  & p {
+    /* Tipografia */
+    color: var(--gray-letter1);
+  }
+
+  /* Margem inferior no h2 */
+  & h2 {
+    margin-bottom: 0.25rem;
+  }
+
+  /* Logo do desktop */
+  & > img {
+    height: 120px;
+  }
+}
+
+/* Linha do Badge */
+.badgeLine {
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+
+  /* Espaçamento */
+  gap: 20px;
+
+  /* Imagem */
+  & img {
+    /* Dimensões */
+    height: 60px;
+    width: 60px;
+  }
+}
+
+/* Headline para desktop */
+.headlineCTA {
+  /* Coluna com o texto */
+  & > .textCol {
+    width: 100%;
+    /* Espaçamento */
+    & h2 {
+      margin-top: 0.625rem; /* 10px */
+      margin-bottom: 1.25rem; /* 20px */
+    }
+  }
+}
+
+/* Responsividade do texto */
+@media screen and (max-width: 1023px) {
+  /* Exibir apenas texto mobile */
+  .desktopText {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* Exibir apenas texto desktop */
+  .mobileText {
+    display: none;
+  }
+}
+
+/* Responsividade das imagens */
+@media screen and (max-width: 767px) {
+  /* Exibir apenas logo mobile */
+  .desktopLogo {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* Exibir apenas logo desktop */
+  .mobileLogo {
+    display: none;
+  }
+}
