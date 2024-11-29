@@ -1,17 +1,27 @@
 /* importação de componentes */
-import RedirectCard from "./RedirectCard"
+import RedirectCard, { RedirectCardsProps } from "./RedirectCard"
 /* módulos CSS */
 import styles from "./RedirectCardGroup.module.css"
 
 /**
+ * Interface dos props do componente RedirectCardGroup.
+ */
+interface RedirectCardGroupProps {
+  cards: RedirectCardsProps[]
+}
+
+/**
  * Componente de grupo de RedirectCards.
  */
-export default function RedirectCardGroup(): JSX.Element {
+export default function RedirectCardGroup({ cards }: RedirectCardGroupProps): JSX.Element {
   return (
     <section className={styles.cardGroup}>
-      <RedirectCard title="Recursos disponíveis" text="Os visitantes podem acessar uma ampla variedade de recursos, incluindo ebooks, whitepapers e relatórios." link="/recursos" />
-      <RedirectCard title="Fórum da comunidade" text="Participe do nosso fórum ativo da comunidade para discutir tendências da indústria e colaborar com colegas." link="/recursos" />
-      <RedirectCard title="Eventos Tech" text="Fique atualizado sobre os próximos eventos tecnológicos, webinars e conferências para aprimorar seu conhecimento." link="/recursos" />
+      {/* Percorrer a lista JSON */}
+      {cards.map((card) => (
+        <>
+          <RedirectCard title={card.title} text={card.text} link={card.link} />
+        </>
+      ))}
     </section>
   )
 }

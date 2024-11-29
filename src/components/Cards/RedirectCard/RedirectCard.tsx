@@ -8,7 +8,7 @@ import styles from "./RedirectCard.module.css"
 /**
  * Interface dos props do componente RedirectCards.
  */
-interface RedirectCards {
+export interface RedirectCardsProps {
   /** Título exibido nos cards. */
   title: string
   /** Texto dos cards. */
@@ -20,7 +20,7 @@ interface RedirectCards {
 /**
  * Cards de Redirecionamento. Os cards são compostos por: título, parágrafo e ícone de redirecionamento.
  */
-export default function RedirectCards({ title, text, link }: RedirectCards): JSX.Element {
+export default function RedirectCards({ title, text, link }: RedirectCardsProps): JSX.Element {
   return (
     <Link
       to={link} // endereço
@@ -38,7 +38,7 @@ export default function RedirectCards({ title, text, link }: RedirectCards): JSX
 /**
  * Headline do card de redirecionamento.
  */
-function HeadlineRedirectCard({ title }: Pick<RedirectCards, "title">): JSX.Element {
+function HeadlineRedirectCard({ title }: Pick<RedirectCardsProps, "title">): JSX.Element {
   return (
     <header className={styles.headlineCard}>
       {/* Título do card */}
