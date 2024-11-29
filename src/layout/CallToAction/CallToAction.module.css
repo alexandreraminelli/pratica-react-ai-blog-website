@@ -21,7 +21,6 @@
   & p {
     /* Tipografia */
     color: var(--gray-letter1);
-    font-size: 0.938rem; /* 15px */
   }
 
   /* Margem inferior no h2 */
