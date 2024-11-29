@@ -7,7 +7,18 @@
   /* Borda superior */
   border-top: var(--border01);
 
+  /* Layout */
+  display: flex;
+  flex-direction: column;
   /* Espaçamento */
   padding-block: 40px;
   gap: 40px;
+}
+
+/* CTA pra desktop */
+@media screen and (min-width: 1024px) {
+  .callToAction {
+    /* Aumentar espaçamento */
+    gap: 50px;
+  }
 }
