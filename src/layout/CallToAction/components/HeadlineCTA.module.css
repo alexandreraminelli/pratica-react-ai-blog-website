@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* Estilos do Headline do CTA */
+
+/* Headline do CTA */
+.headlineCTA {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* Remover margens do título e parágrafos */
+  h2,
+  p {
+    margin: 0;
+  }
+
+  /* Parágrafos */
+  & p {
+    /* Tipografia */
+    color: var(--gray-letter1);
+  }
+
+  /* Margem inferior no h2 */
+  & h2 {
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Linha do Badge */
+.badgeLine {
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+
+  /* Espaçamento */
+  gap: 20px;
+
+  /* Imagem */
+  & img {
+    /* Dimensões */
+    height: 60px;
+    width: 60px;
+  }
+}
+
+/* Responsividade do texto */
+@media screen and (max-width: 1023px) {
+  .desktopText {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobileText {
+    display: none;
+  }
+}

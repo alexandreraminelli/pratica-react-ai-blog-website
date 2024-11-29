@@ -2,7 +2,7 @@
 import Badge from "../../../components/Badge/Badge" // badges
 
 /* módulos CSS */
-import styles from "../CallToAction.module.css"
+import styles from "./HeadlineCTA.module.css"
 /* importação de imagens */
 import logo from "../../../assets/images/logo/logo-favicon.svg"
 
