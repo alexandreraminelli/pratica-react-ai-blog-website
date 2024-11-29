@@ -16,8 +16,10 @@
   /* Cantos */
   border-radius: 10px;
 
+  /* Transições (hover e responsividade) */
+  transition: border-color 0.5s ease, padding 1s;
+
   /* Efeito hover */
-  transition: border-color 0.5s ease;
   &:hover {
     border-color: var(--primary-color);
     /* Recolorir parágrafo */
@@ -35,13 +37,16 @@
   /* Título */
   & h3 {
     font-size: 1rem; /* 16px */
+
+    /* Transição */
+    transition: font-size 0.5s;
   }
 
   /* Parágrafo */
   & p {
     color: var(--gray-letter2);
-    /* Transição pro hover */
-    transition: color 0.5s ease;
+    /* Transição */
+    transition: color 0.5s ease, font-size 0.5s;
   }
 }
 
