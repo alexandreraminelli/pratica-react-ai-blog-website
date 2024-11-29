@@ -44,6 +44,8 @@ h2 {
 
 /* Parágrafos */
 p {
+  line-height: 150%;
+
   /* Variações de cores */
   /* cinza 1 */
   &.gray1 {
