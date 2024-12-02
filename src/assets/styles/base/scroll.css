@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+html {
+  /* Rolagem suave para o topo da página ou uma seção destinada */
+  scroll-behavior: smooth;
+  /* Padding-top no scroll para o header não ficar em cima da seção destinada */
+  scroll-padding-top: 80px;
+}

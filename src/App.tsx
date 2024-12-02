@@ -1,5 +1,7 @@
 // Importação do React Router Dom
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import ScrollToTop from "./utils/navigation/ScrollToTop" // rolagem até o topo
+
 /* Componentes de páginas */
 import Home from "./pages/Home"
 import News from "./pages/News"
@@ -21,37 +23,38 @@ import Footer from "./layout/Footer/Footer" // rodapé
 export default function App(): JSX.Element {
   // Retorno JSX
   return (
-    <>
-      <BrowserRouter>
-        {/* Top Banner */}
-        <TopBanner />
+    <Router>
+      {/* Componente com função para rolar até o topo quando a página for alterada */}
+      <ScrollToTop />
 
-        {/* Header */}
-        <Header />
+      {/* Top Banner */}
+      <TopBanner />
 
-        {/* Rotas pras páginas */}
-        <Routes>
-          {/* Página Inicial */}
-          <Route path="/" element={<Home />} />
-          {/* Página Noticias */}
-          <Route path="/noticias" element={<News />} />
-          {/* Página Podcasts */}
-          <Route path="/podcasts" element={<Podcasts />} />
-          {/* Página Recursos */}
-          <Route path="/recursos" element={<Resources />} />
-          {/* Página Contato */}
-          <Route path="/contato" element={<Contact />} />
+      {/* Header */}
+      <Header />
 
-          {/* Página 404 (Not Found) */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+      {/* Rotas pras páginas */}
+      <Routes>
+        {/* Página Inicial */}
+        <Route path="/" element={<Home />} />
+        {/* Página Noticias */}
+        <Route path="/noticias" element={<News />} />
+        {/* Página Podcasts */}
+        <Route path="/podcasts" element={<Podcasts />} />
+        {/* Página Recursos */}
+        <Route path="/recursos" element={<Resources />} />
+        {/* Página Contato */}
+        <Route path="/contato" element={<Contact />} />
 
-        {/* CTA */}
-        <CallToAction />
+        {/* Página 404 (Not Found) */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
 
-        {/* Footer */}
-        <Footer />
-      </BrowserRouter>
-    </>
+      {/* CTA */}
+      <CallToAction />
+
+      {/* Footer */}
+      <Footer />
+    </Router>
   )
 }
