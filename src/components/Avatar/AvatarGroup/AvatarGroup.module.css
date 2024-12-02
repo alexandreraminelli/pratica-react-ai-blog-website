@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* Estilos dos grupos de avatares */
+
+.avatarGroup {
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+
+  /* Dimensões */
+  width: fit-content;
+  /* Espaçamento */
+  padding: 8px;
+
+  /* Aparência */
+  background-color: var(--background-secondary);
+  border-radius: 100px;
+  border: var(--border01);
+
+  /* Imagens de avatares */
+  & img {
+    /* Dimensões */
+    width: 40px;
+    height: 40px;
+
+    /* Preenchimento */
+    background-color: var(--background-tertiary);
+    /* Círculo */
+    border-radius: 50%;
+    border: var(--border04);
+
+    /* Posição na sobreposição */
+    margin-inline-start: -14px;
+    /* Não deslocar a primeira imagem */
+    &:first-child {
+      margin-inline-start: 0;
+    }
+
+    /* Imagem não ser selecionável */
+    user-select: none;
+  }
+}
