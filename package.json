@@ -1,13 +1,24 @@
 {
   "name": "future-tech-website",
+  "description": "Site criado para praticar habilidades de desenvolvimento front-end utilizando as linguagens HTML, CSS, JavaScript, TypeScript e a biblioteca React.",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://pratica-react-ai-blog-website.vercel.app",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "author": {
+    "name": "Alexandre Raminelli Junior",
+    "email": "alexandre.raminelli9491@gmail.com",
+    "url": "https://github.com/alexandreraminelli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandreraminelli/pratica-react-ai-blog-website"
   },
   "dependencies": {
     "react": "^18.3.1",
