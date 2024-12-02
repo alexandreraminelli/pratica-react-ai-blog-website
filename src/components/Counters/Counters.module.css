@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* Estilos dos contadores */
+
+.counterCard {
+  /* Espaçamento */
+  padding: 20px;
+
+  /* Borda */
+  border-inline: var(--border01);
+  border-top: var(--border01);
+
+  /* Retirar margens dos textos */
+  p {
+    margin: 0;
+  }
+
+  /* Número */
+  .number {
+    /* Tipografia */
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600;
+
+    /* Símbolo de "+" */
+    .plusSign {
+      color: var(--primary-color);
+    }
+  }
+  /* Texto */
+  .text {
+    color: var(--gray-letter2);
+    line-height: 130%;
+  }
+}
