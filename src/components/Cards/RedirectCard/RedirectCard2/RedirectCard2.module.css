@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* Estilos dos cards de redirecionamento (2º variação) */
+
+.redirectCard {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  /* Espaçamento */
+  padding-block: 30px;
+  gap: 10px;
+
+  /* Bordas */
+  border-block: var(--border01);
+
+  /* Remover margens pré-definidas de texto */
+  & h3,
+  & p {
+    margin: 0;
+  }
+
+  /* Sub-container */
+  & > .subcontainer {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Espaçamento */
+    gap: 16px;
+
+    /* Ícone abstrato */
+    & > svg {
+      /* Dimensões */
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Container de linha */
+    & .row {
+      /* Layout */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      /* Dimensões */
+      width: 100%;
+      /* Espaçamento */
+      gap: 14px;
+    }
+
+    /* <hgroup> */
+    & hgroup {
+      /* Layout */
+      display: flex;
+      flex-direction: column;
+      /* Espaçamento */
+      gap: 2px;
+    }
+  }
+
+  /* Tipografia */
+  /* Título */
+  & h3 {
+    font-size: 1rem; /* 16px */
+  }
+  /* Parágrafos */
+  & p {
+    color: var(--gray-letter1);
+  }
+}
