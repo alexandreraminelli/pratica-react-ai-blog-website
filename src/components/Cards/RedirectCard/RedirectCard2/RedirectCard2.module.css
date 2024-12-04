@@ -12,10 +12,13 @@
   /* Bordas */
   border-block: var(--border01);
 
-  /* Remover margens pré-definidas de texto */
+  /* Texto */
   & h3,
   & p {
+    /* Remover margens pré-definidas de texto */
     margin: 0;
+    /* Transição responsiva */
+    transition: font-size 1s;
   }
 
   /* Sub-container */
@@ -27,7 +30,7 @@
     /* Espaçamento */
     gap: 16px;
 
-    /* Ícone abstrato */
+    /* Ícone decorativo */
     & > svg {
       /* Dimensões */
       width: 30px;
@@ -56,13 +59,49 @@
     }
   }
 
-  /* Tipografia */
-  /* Título */
   & h3 {
     font-size: 1rem; /* 16px */
   }
   /* Parágrafos */
   & p {
     color: var(--gray-letter1);
+  }
+
+  /* Transição responsiva nos SVGs */
+  & svg {
+    transition: width 1s, height 1s;
+  }
+
+  /* Transição responsiva no padding e gap */
+  &,
+  & .subcontainer,
+  & .row,
+  & hgroup {
+    transition: padding 1s, gap 1s;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .redirectCard {
+    /* Aumentar espaçamento */
+    padding-block: 40px;
+    gap: 20px;
+
+    & > .subcontainer {
+      /* Aumentar espaçamento */
+      gap: 20px;
+
+      /* Aumentar ícone decorativo */
+      & > svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    /* Aumentar fonte do título */
+    & h3 {
+      font-size: 1.125rem; /* 18px */
+    }
   }
 }
