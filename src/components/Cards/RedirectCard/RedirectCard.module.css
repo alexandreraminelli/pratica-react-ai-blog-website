@@ -57,21 +57,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  /* Ícone */
-  & svg {
-    /* Dimensões */
-    height: 20px;
-    width: 20px;
-    /* Cor */
-    color: var(--dark08);
-
-    /* Preenchimento */
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    /* Espaçamento */
-    padding: 10px;
-  }
 }
 
 /* Redirect Card para desktop */
@@ -85,9 +70,5 @@
     & h3 {
       font-size: 1.125rem; /* 18px */
     }
-  }
-  /* Aumentar ícone */
-  .headlineCard svg {
-    padding: 12px;
   }
 }

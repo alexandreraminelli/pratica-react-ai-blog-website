@@ -1,7 +1,7 @@
 /* importação de dependências */
 import { Link } from "react-router-dom"
 /* ícones SVG */
-import RedirectIcon from "../../icons/RedirectIcon"
+import CircleRedirectIcon from "../../icons/CircleRedirectIcon/CircleRedirectIcon"
 /* módulos CSS */
 import styles from "./RedirectCard.module.css"
 
@@ -44,7 +44,7 @@ function HeadlineRedirectCard({ title }: Pick<RedirectCardsProps, "title">): JSX
       {/* Título do card */}
       <h3>{title}</h3>
       {/* Ícone */}
-      <RedirectIcon />
+      <CircleRedirectIcon />
     </header>
   )
 }
