@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+svg.redirectCircle {
+  /* Dimensões */
+  height: 20px;
+  width: 20px;
+  /* Cor */
+  color: var(--dark08);
+
+  /* Círculo */
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  /* Espaçamento */
+  padding: 10px;
+}
+
+/* Aumentar no desktop */
+@media screen and (min-width: 1024px) {
+  svg.redirectCircle {
+    padding: 12px;
+  }
+}
