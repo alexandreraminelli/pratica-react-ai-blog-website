@@ -1,10 +1,10 @@
 /* importação de componentes */
-import RedirectCard, { RedirectCardsProps } from "./RedirectCard"
+import RedirectCard, { RedirectCardsProps } from "./RedirectCard1.tsx"
 /* módulos CSS */
-import styles from "./RedirectCardGroup.module.css"
+import styles from "./RedirectCard1Group.module.css"
 
 /**
- * Interface dos props do componente RedirectCardGroup.
+ * Interface dos props do componente RedirectCard2Group.
  */
 interface RedirectCardGroupProps {
   cards: RedirectCardsProps[]
@@ -13,7 +13,7 @@ interface RedirectCardGroupProps {
 /**
  * Componente de grupo de RedirectCards.
  */
-export default function RedirectCardGroup({ cards }: RedirectCardGroupProps): JSX.Element {
+export default function RedirectCard1Group({ cards }: RedirectCardGroupProps): JSX.Element {
   return (
     <section className={styles.cardGroup}>
       {/* Percorrer a lista JSON */}

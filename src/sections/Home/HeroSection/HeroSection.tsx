@@ -3,7 +3,7 @@ import AvatarGroup from "../../../components/Avatar/AvatarGroup/AvatarGroup" // 
 import CounterGroup from "../../../components/Counters/CounterGroup"
 import RedirectButton from "../../../components/Buttons/RedirectButton/RedirectButton" // botão de redirecionamento
 /* componentes do Hero Section */
-import RedirectCardGroup from "./components/RedirectCardGroup/RedirectCardGroup"
+import RedirectCard2Group from "../../../components/Cards/RedirectCard/RedirectCard2/RedirectCard2Group.tsx"
 
 /* módulos CSS */
 import styles from "./HeroSection.module.css"
@@ -43,7 +43,7 @@ export default function HeroSection(): JSX.Element {
 
       {/* Container inferior */}
       <div>
-        <RedirectCardGroup />
+        <RedirectCard2Group />
       </div>
 
       {/* Links */}

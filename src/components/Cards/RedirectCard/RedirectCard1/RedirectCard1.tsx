@@ -1,9 +1,9 @@
 /* importação de dependências */
 import { Link } from "react-router-dom"
 /* ícones SVG */
-import CircleRedirectIcon from "../../icons/CircleRedirectIcon/CircleRedirectIcon"
+import CircleRedirectIcon from "../../../icons/CircleRedirectIcon/CircleRedirectIcon.tsx"
 /* módulos CSS */
-import styles from "./RedirectCard.module.css"
+import styles from "./RedirectCard1.module.css"
 
 /**
  * Interface dos props do componente RedirectCards.
@@ -20,7 +20,7 @@ export interface RedirectCardsProps {
 /**
  * Cards de Redirecionamento. Os cards são compostos por: título, parágrafo e ícone de redirecionamento.
  */
-export default function RedirectCards({ title, text, link }: RedirectCardsProps): JSX.Element {
+export default function RedirectCard1({ title, text, link }: RedirectCardsProps): JSX.Element {
   return (
     <Link
       to={link} // endereço
