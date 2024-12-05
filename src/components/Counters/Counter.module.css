@@ -2,10 +2,13 @@
 /* Estilos dos contadores */
 
 .counterCard {
-  /* Espaçamento */
+  /* espaçamento */
   padding: 20px;
 
-  /* Borda */
+  /* transição responsiva */
+  transition: padding 0.5s;
+
+  /* borda */
   border-inline: var(--border01);
   border-top: var(--border01);
 
@@ -15,19 +18,35 @@
   }
 
   /* Número */
-  .number {
-    /* Tipografia */
+  & .number {
+    /* tipografia */
     font-size: 1.5rem; /* 24px */
     font-weight: 600;
+
+    /* transição responsiva */
+    transition: font-size 0.5s;
 
     /* Símbolo de "+" */
     .plusSign {
       color: var(--primary-color);
     }
   }
-  /* Texto */
-  .text {
+  /* texto */
+  & .text {
     color: var(--gray-letter2);
     line-height: 130%;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 768px) {
+  .counterCard {
+    /* espaçamento */
+    padding-block: 30px;
+
+    /* tipografia */
+    & .number {
+      font-size: 1.875rem; /* 30px */
+    }
   }
 }
