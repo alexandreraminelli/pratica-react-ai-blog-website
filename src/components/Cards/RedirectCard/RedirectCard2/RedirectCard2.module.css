@@ -14,8 +14,8 @@
   & p {
     /* Remover margens pré-definidas de texto */
     margin: 0;
-    /* Transição responsiva */
-    transition: font-size 1s;
+    /* Transição */
+    transition: font-size 1s, color 1s;
   }
 
   /* Sub-container */
@@ -75,6 +75,16 @@
   & .row,
   & hgroup {
     transition: padding 1s, gap 1s;
+  }
+
+  /* Efeito hover */
+  &:hover {
+    & h3 {
+      color: var(--primary-color);
+    }
+    & p {
+      color: var(--white-letter);
+    }
   }
 }
 
