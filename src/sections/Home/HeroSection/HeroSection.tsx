@@ -46,13 +46,11 @@ export default function HeroSection(): JSX.Element {
           <Introduction introContent={content.introduction} />
 
           {/* Contadores */}
-          <CounterGroup />
+          <CounterGroup className={styles.counterGroup} />
         </div>
 
         {/* Coluna direita */}
-        <div className={styles.rightCol}>
-          <ResourcesAside />
-        </div>
+        <ResourcesAside />
       </div>
 
       {/* Container inferior */}

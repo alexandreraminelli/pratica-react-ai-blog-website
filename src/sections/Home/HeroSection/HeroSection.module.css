@@ -28,11 +28,6 @@
   }
 }
 
-/* Padding-container apenas no mobile */
-.introduction,
-.resourcesAside {
-}
-
 /* Introdução */
 .introduction {
   /* layout */
@@ -110,5 +105,34 @@
 @media screen and (min-width: 1024px) {
   /* Container superior: divido em colunas */
   .topContainer {
+    flex-direction: row;
+
+    /* Remover espaçamento */
+    padding-block: 0;
+
+    /* Coluna esquerda */
+    .leftCol {
+      /* Espaçamento */
+      gap: 100px;
+    }
+  }
+
+  /* Lista de contadores */
+  .counterGroup > :first-child {
+    padding-inline-start: var(--padding-container);
+  }
+
+  /* Aside de recursos no desktop (coluna direita) */
+  .resourcesAside {
+    /* Espaçamento */
+    padding-inline-start: 50px;
+    padding-inline-end: var(--padding-container);
+    padding-block: 150px 50px;
+
+    /* Borda */
+    border-inline-start: var(--border01);
+
+    /* Não quebrar o texto */
+    text-wrap: nowrap;
   }
 }

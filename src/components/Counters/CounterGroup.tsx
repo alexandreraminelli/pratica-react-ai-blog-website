@@ -5,11 +5,19 @@ import Counters from "./Counters"
 import styles from "./CounterGroup.module.css"
 
 /**
- * Componente de grupo de contadores.
+ * Interface dos props do componente `CounterGroup`.
  */
-export default function CounterGroup(): JSX.Element {
+interface CounterGroupProps {
+  /** Classes CSS personalizadas. (opcional) */
+  className?: string
+}
+
+/**
+ * Componente de grupo de contadores. Renderiza e organiza componentes `Counters`.
+ */
+export default function CounterGroup({ className }: CounterGroupProps): JSX.Element {
   return (
-    <div className={styles.counterGroup}>
+    <div className={`${styles.counterGroup} ${className}`}>
       <Counters number={300} text="Recursos disponíveis" />
       <Counters number={12} thousand text="Total de downloads" />
       <Counters number={10} thousand text="Usuários ativos" />
