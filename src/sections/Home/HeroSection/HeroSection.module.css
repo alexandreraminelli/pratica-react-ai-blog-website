@@ -92,9 +92,12 @@
       font-size: 1.125rem; /* 18px */
     }
   }
-  /* Botão */
-  & a {
-    /* Largura total */
+}
+
+/* Mobile only */
+@media screen and (max-width: 768px) {
+  /* Botão ocupar toda a largura no mobile */
+  .resourcesAside a {
     padding-inline: 0;
     width: 100%;
     justify-content: center;
@@ -105,14 +108,16 @@
 @media screen and (min-width: 1024px) {
   /* Container superior: divido em colunas */
   .topContainer {
+    /* layout */
     flex-direction: row;
 
-    /* Remover espaçamento */
+    /* remover espaçamento */
     padding-block: 0;
 
     /* Coluna esquerda */
     .leftCol {
-      /* Espaçamento */
+      /* espaçamento */
+      padding-top: 100px;
       gap: 100px;
     }
   }

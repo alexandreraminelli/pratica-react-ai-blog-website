@@ -2,7 +2,6 @@
 import AvatarGroup from "../../../components/Avatar/AvatarGroup/AvatarGroup"
 import CounterGroup from "../../../components/Counters/CounterGroup"
 import RedirectButton from "../../../components/Buttons/RedirectButton/RedirectButton"
-/* componentes do Hero Section */
 import RedirectCard2Group from "../../../components/Cards/RedirectCard/RedirectCard2/RedirectCard2Group.tsx"
 
 /* módulos CSS */
