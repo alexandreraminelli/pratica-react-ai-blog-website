@@ -39,6 +39,9 @@
   /* padding-container (apenas pro mobile) */
   padding-inline: var(--padding-container);
 
+  /* transição responsiva */
+  transition: gap 1s;
+
   /* tipografia */
   /* Slogan */
   .slogan {
@@ -120,6 +123,19 @@
     /* Ajustar padding */
     padding-inline-start: var(--padding-container);
     padding-inline-end: 40px;
+
+    /* espaçamento */
+    gap: 20px;
+
+    /* Slogan */
+    & .slogan {
+      font-size: 1.375rem; /* 22px */
+    }
+
+    & hgroup {
+      /* espaçamento */
+      gap: 14px;
+    }
   }
 
   /* Lista de contadores */
