@@ -134,6 +134,9 @@
     padding-inline-end: var(--padding-container);
     padding-block: 150px 50px;
 
+    /* layout */
+    justify-content: flex-end;
+
     /* borda */
     border-inline-start: var(--border01);
   }
