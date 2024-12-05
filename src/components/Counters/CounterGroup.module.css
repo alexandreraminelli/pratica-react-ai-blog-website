@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* Estilos do grupo de contador */
+
+.counterGroup {
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  /* Filhos terem o mesmo tamanho */
+  & > * {
+    flex: 1;
+  }
+}

@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* Estilos da Hero Section da homepage */
+
+.heroSection {
+  /* remover espaçamento pré-definido de texto */
+  & p,
+  & h2,
+  & h3 {
+    margin: 0;
+  }
+}
+
+/* Container superior */
+.topContainer {
+  /* layout: 1 coluna no mobile */
+  display: flex;
+  flex-direction: column;
+
+  /* Coluna esquerda */
+  .leftCol {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+
+    /* espaçamento */
+    padding-top: 40px;
+    gap: 30px;
+  }
+}
+
+/* Introdução */
+.introduction {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  /* espaçamento */
+  gap: 14px;
+
+  /* padding-container (apenas pro mobile) */
+  padding-inline: var(--padding-container);
+
+  /* transição responsiva */
+  transition: gap 1s;
+
+  /* tipografia */
+  /* Slogan */
+  .slogan {
+    font-size: 1.125rem; /* 18px */
+  }
+  .introductionText {
+    text-align: justify;
+  }
+
+  /* Hgroup */
+  & hgroup {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    /* espaçamento */
+    gap: 10px;
+  }
+}
+
+/* Aside de Recursos */
+.resourcesAside {
+  /* Imagem de fundo */
+  background-image: url("../../../assets/svgs/abstract-design.svg");
+  background-repeat: no-repeat;
+  background-position: -120px -104px;
+
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  /* espaçamento */
+  padding-block: 100px 40px;
+  gap: 20px;
+  /* padding-container (apenas pro mobile) */
+  padding-inline: calc(var(--padding-container) * 2);
+
+  /* Texto */
+  & hgroup {
+    /* layout e espaçamento */
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem; /* 4px */
+  }
+}
+
+/* Mobile only */
+@media screen and (max-width: 768px) {
+  /* Botão ocupar toda a largura no mobile */
+  .resourcesAside a {
+    padding-inline: 0;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  /* Container superior: divido em colunas */
+  .topContainer {
+    /* layout */
+    flex-direction: row;
+
+    /* remover espaçamento */
+    padding-block: 0;
+
+    /* Coluna esquerda */
+    .leftCol {
+      /* espaçamento */
+      padding-top: 100px;
+      gap: 100px;
+      /* dimensões da coluna */
+      width: 58%;
+    }
+  }
+
+  /* Seção de introdução */
+  .introduction {
+    /* Ajustar padding */
+    padding-inline-start: var(--padding-container);
+    padding-inline-end: 40px;
+
+    /* espaçamento */
+    gap: 20px;
+
+    /* Slogan */
+    & .slogan {
+      font-size: 1.375rem; /* 22px */
+    }
+
+    & hgroup {
+      /* espaçamento */
+      gap: 14px;
+    }
+  }
+
+  /* Lista de contadores */
+  .counterGroup > :first-child {
+    padding-inline-start: var(--padding-container);
+  }
+
+  /* Aside de recursos no desktop (coluna direita) */
+  .resourcesAside {
+    /* espaçamento */
+    padding-inline-start: 50px;
+    padding-inline-end: var(--padding-container);
+    padding-block: 150px 50px;
+
+    /* layout */
+    justify-content: flex-end;
+
+    /* borda */
+    border-inline-start: var(--border01);
+  }
+}

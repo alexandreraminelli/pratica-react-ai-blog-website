@@ -1,6 +1,6 @@
 /* importação de componentes */
 import HeadlineCTA from "./components/HeadlineCTA" // headline do CTA
-import RedirectCardGroup from "../../components/Cards/RedirectCard/RedirectCardGroup" // lista de cards de redirecionamento
+import RedirectCard1Group from "../../components/Cards/RedirectCard/RedirectCard1/RedirectCard1Group.tsx" // lista de cards de redirecionamento
 /* módulos CSS */
 import styles from "./CallToAction.module.css"
 /* JSON dos cards */
@@ -16,7 +16,7 @@ export default function CallToAction(): JSX.Element {
       <HeadlineCTA />
 
       {/* Lista de cards */}
-      <RedirectCardGroup cards={cardList} />
+      <RedirectCard1Group cards={cardList} />
     </section>
   )
 }

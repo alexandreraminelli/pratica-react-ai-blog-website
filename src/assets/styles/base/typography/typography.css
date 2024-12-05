@@ -31,6 +31,17 @@ body {
   color: var(--white-letter);
 }
 
+/* Transição responsiva */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  transition: font-size 0.5s ease;
+}
+
 /* Headings */
 h1,
 h2,
@@ -54,6 +65,10 @@ p {
   /* cinza 2 */
   &.gray2 {
     color: var(--gray-letter2);
+  }
+  /* dark */
+  &.dark {
+    color: var(--dark-letter1);
   }
 }
 

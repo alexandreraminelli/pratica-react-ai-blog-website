@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* Estilos dos cards de redirecionamento (2º variação) */
+
+.redirectCard {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  /* Espaçamento */
+  padding-block: 30px;
+  gap: 10px;
+
+  /* Texto */
+  & h3,
+  & p {
+    /* Remover margens pré-definidas de texto */
+    margin: 0;
+    /* Transição */
+    transition: font-size 1s, color 1s;
+  }
+
+  /* Sub-container */
+  & > .subcontainer {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Espaçamento */
+    gap: 16px;
+
+    /* Ícone decorativo */
+    & > svg {
+      /* Dimensões */
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Container de linha */
+    & .row {
+      /* Layout */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      /* Dimensões */
+      width: 100%;
+      /* Espaçamento */
+      gap: 14px;
+    }
+
+    /* <hgroup> */
+    & hgroup {
+      /* Layout */
+      display: flex;
+      flex-direction: column;
+      /* Espaçamento */
+      gap: 2px;
+    }
+  }
+
+  & h3 {
+    font-size: 1rem; /* 16px */
+  }
+  /* Parágrafos */
+  & p {
+    color: var(--gray-letter1);
+  }
+
+  /* Transição responsiva nos SVGs */
+  & svg {
+    transition: width 1s, height 1s;
+  }
+
+  /* Transição responsiva no padding e gap */
+  &,
+  & .subcontainer,
+  & .row,
+  & hgroup {
+    transition: padding 1s, gap 1s;
+  }
+
+  /* Efeito hover */
+  &:hover {
+    & h3 {
+      color: var(--primary-color);
+    }
+    & p {
+      color: var(--white-letter);
+    }
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .redirectCard {
+    /* Aumentar espaçamento */
+    padding-block: 40px;
+    gap: 20px;
+
+    & > .subcontainer {
+      /* Aumentar espaçamento */
+      gap: 20px;
+
+      /* Aumentar ícone decorativo */
+      & > svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    /* Aumentar fonte do título */
+    & h3 {
+      font-size: 1.125rem; /* 18px */
+    }
+  }
+}
