@@ -1,7 +1,7 @@
 /* importação de componentes */
-import AvatarGroup from "../../../components/Avatar/AvatarGroup/AvatarGroup" // avatares
+import AvatarGroup from "../../../components/Avatar/AvatarGroup/AvatarGroup"
 import CounterGroup from "../../../components/Counters/CounterGroup"
-import RedirectButton from "../../../components/Buttons/RedirectButton/RedirectButton" // botão de redirecionamento
+import RedirectButton from "../../../components/Buttons/RedirectButton/RedirectButton"
 /* componentes do Hero Section */
 import RedirectCard2Group from "../../../components/Cards/RedirectCard/RedirectCard2/RedirectCard2Group.tsx"
 
@@ -16,19 +16,8 @@ export default function HeroSection(): JSX.Element {
     <section className={styles.heroSection}>
       {/* Container superior */}
       <div>
-        {/* Coluna esquerda */}
-        <div className={styles.row}>
-          <header>
-            {/* Título e subtítulo */}
-            <hgroup>
-              <p className={styles.slogan}>Sua jornada para o amanhã começa aqui</p>
-              <h2>Explore as Fronteiras da Inteligência Artificial</h2>
-              <p className={styles.introduction}>Bem-vindo ao centro pulsante da inovação em IA. FutureTech AI News é sua porta de entrada para um mundo onde máquinas pensam, aprendem e moldam o futuro. Embarque conosco nessa expedição visionária ao núcleo da IA.</p>
-            </hgroup>
-          </header>
-          {/* Contadores */}
-          <CounterGroup />
-        </div>
+        {/* Introdução (coluna esquerda) */}
+        <Introduction />
 
         {/* Coluna direita */}
         <section>
@@ -48,5 +37,25 @@ export default function HeroSection(): JSX.Element {
 
       {/* Links */}
     </section>
+  )
+}
+
+/**
+ * Componente Introduction. Exibe a introdução da página inicial no Hero Section.
+ */
+function Introduction(): JSX.Element {
+  return (
+    <div className={styles.introduction}>
+      <header>
+        {/* Título e subtítulo */}
+        <hgroup>
+          <p className={`dark ${styles.slogan}`}>Sua jornada para o amanhã começa aqui</p>
+          <h2>Explore as Fronteiras da Inteligência Artificial</h2>
+          <p className={`gray1 ${styles.introductionText}`}>Bem-vindo ao centro pulsante da inovação em IA. FutureTech AI News é sua porta de entrada para um mundo onde máquinas pensam, aprendem e moldam o futuro. Embarque conosco nessa expedição visionária ao núcleo da IA.</p>
+        </hgroup>
+      </header>
+      {/* Contadores */}
+      <CounterGroup />
+    </div>
   )
 }

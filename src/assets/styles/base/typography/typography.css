@@ -55,6 +55,10 @@ p {
   &.gray2 {
     color: var(--gray-letter2);
   }
+  /* dark */
+  &.dark {
+    color: var(--dark-letter1);
+  }
 }
 
 /* Links (âncoras) */
