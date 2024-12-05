@@ -91,6 +91,11 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem; /* 4px */
+
+    /* Título */
+    & h3 {
+      font-size: 1.125rem; /* 18px */
+    }
   }
   /* Botão */
   & a {
