@@ -119,6 +119,8 @@
       /* espaçamento */
       padding-top: 100px;
       gap: 100px;
+      /* dimensões da coluna */
+      width: 70%;
     }
   }
 
@@ -129,15 +131,12 @@
 
   /* Aside de recursos no desktop (coluna direita) */
   .resourcesAside {
-    /* Espaçamento */
+    /* espaçamento */
     padding-inline-start: 50px;
     padding-inline-end: var(--padding-container);
     padding-block: 150px 50px;
 
-    /* Borda */
+    /* borda */
     border-inline-start: var(--border01);
-
-    /* Não quebrar o texto */
-    text-wrap: nowrap;
   }
 }
