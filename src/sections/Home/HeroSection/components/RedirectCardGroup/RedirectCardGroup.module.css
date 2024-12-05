@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* Estilos do grupo de cards de redirecionamento */
+
+.redirectCardGroup {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+
+  /* Bordas */
+  border-block-start: var(--border01);
+
+  /* Filhos */
+  & > * {
+    /* Mesmo tamanho */
+    flex: 1;
+
+    /* Divisores */
+    border-block-end: var(--border01);
+    /* Remover borda do último */
+    &:last-child {
+      border-block-end: none;
+    }
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .redirectCardGroup {
+    /* Layout */
+    flex-direction: row;
+
+    /* Filhos */
+    & > * {
+      /* Espaçamento lateral */
+      padding-inline: 30px;
+
+      /* Divisores */
+      border-block-end: none;
+      border-inline-end: var(--border01);
+      /* Remover divisor do último elemento */
+      &:last-child {
+        border-inline-end: none;
+      }
+    }
+  }
+}

@@ -9,9 +9,6 @@
   padding-block: 30px;
   gap: 10px;
 
-  /* Bordas */
-  border-block: var(--border01);
-
   /* Texto */
   & h3,
   & p {
