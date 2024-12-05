@@ -2,14 +2,101 @@
 /* Estilos da Hero Section da homepage */
 
 .heroSection {
+  /* remover espaçamento pré-definido de texto */
+  & p,
+  & h2,
+  & h3 {
+    margin: 0;
+  }
+}
+
+/* Container superior */
+.topContainer {
+  /* layout: 1 coluna no mobile */
+  display: flex;
+  flex-direction: column;
+
+  /* Coluna esquerda */
+  .leftCol {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+
+    /* espaçamento */
+    padding-top: 40px;
+    gap: 30px;
+  }
+}
+
+/* Padding-container apenas no mobile */
+.introduction,
+.resourcesAside {
 }
 
 /* Introdução */
 .introduction {
-  /* Layout */
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  /* espaçamento */
+  gap: 14px;
 
-  /* Tipografia */
-  .introductionText{
-    
+  /* padding-container (apenas pro mobile) */
+  padding-inline: var(--padding-container);
+
+  /* tipografia */
+  /* Slogan */
+  .slogan {
+    font-size: 1.125rem; /* 18px */
+  }
+  /* Título */
+  h2 {
+    font-size: 1.875rem; /* 30px */
+  }
+  .introductionText {
+    text-align: justify;
+  }
+
+  /* Hgroup */
+  & hgroup {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    /* espaçamento */
+    gap: 10px;
+  }
+}
+
+/* Aside de Recursos */
+.resourcesAside {
+  /* Imagem de fundo */
+  background-image: url("../../../assets/svgs/abstract-design.svg");
+  background-repeat: no-repeat;
+  background-position: -120px -104px;
+
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  /* espaçamento */
+  padding-block: 100px 40px;
+  gap: 20px;
+  /* padding-container (apenas pro mobile) */
+  padding-inline: calc(var(--padding-container) * 2);
+
+  /* Texto */
+  & hgroup {
+    /* layout e espaçamento */
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem; /* 4px */
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  /* Container superior: divido em colunas */
+  .topContainer {
   }
 }

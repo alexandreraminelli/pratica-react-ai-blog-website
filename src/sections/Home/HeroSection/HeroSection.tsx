@@ -39,19 +39,20 @@ export default function HeroSection(): JSX.Element {
   return (
     <section className={styles.heroSection}>
       {/* Container superior */}
-      <div>
-        {/* Introdução (coluna esquerda) */}
-        <Introduction introContent={content.introduction} />
+      <div className={styles.topContainer}>
+        {/* Coluna esquerda */}
+        <div className={styles.leftCol}>
+          {/* Introdução (coluna esquerda) */}
+          <Introduction introContent={content.introduction} />
+
+          {/* Contadores */}
+          <CounterGroup />
+        </div>
 
         {/* Coluna direita */}
-        <section>
-          <AvatarGroup />
-          <hgroup>
-            <h3>Explore mais de 1.000 recursos</h3>
-            <p>Mais de 1000 artigos sobre inovações e tendências tecnológicas</p>
-          </hgroup>
-          <RedirectButton text="Explorar Recursos" link="/recursos" />
-        </section>
+        <div className={styles.rightCol}>
+          <ResourcesAside />
+        </div>
       </div>
 
       {/* Container inferior */}
@@ -71,26 +72,40 @@ interface IntroductionProps {
   /** Conteúdo da introdução. */
   introContent: HeroSectionContent["introduction"]
 }
-
 /**
  * Componente Introduction. Exibe a introdução da página inicial no Hero Section.
  */
 function Introduction({ introContent }: IntroductionProps): JSX.Element {
   return (
-    <div className={styles.introduction}>
-      <header>
-        {/* Título e subtítulo */}
-        <hgroup>
-          {/* Slogan */}
-          <p className={`dark ${styles.slogan}`}>{introContent.slogan}</p>
-          {/* Título de introdução */}
-          <h2>{introContent.title}</h2>
-          {/* Parágrafo introdutório */}
-          <p className={`gray1 ${styles.introductionText}`}>{introContent.paragraph}</p>
-        </hgroup>
-      </header>
-      {/* Contadores */}
-      <CounterGroup />
-    </div>
+    <header className={styles.introduction}>
+      {/* Slogan */}
+      <p className={`dark ${styles.slogan}`}>{introContent.slogan}</p>
+      {/* Título e subtítulo */}
+      <hgroup>
+        {/* Título de introdução */}
+        <h2>{introContent.title}</h2>
+        {/* Parágrafo introdutório */}
+        <p className={`gray1 ${styles.introductionText}`}>{introContent.paragraph}</p>
+      </hgroup>
+    </header>
+  )
+}
+
+/**
+ *
+ */
+/**
+ * Componente ResourcesAside. Exibe um `<aside>` sobre os recursos no Hero Section.
+ */
+function ResourcesAside(): JSX.Element {
+  return (
+    <aside className={styles.resourcesAside}>
+      <AvatarGroup />
+      <hgroup>
+        <h3>Explore mais de 1.000 recursos</h3>
+        <p className="gray2">Mais de 1000 artigos sobre inovações e tendências tecnológicas</p>
+      </hgroup>
+      <RedirectButton text="Explorar Recursos" link="/recursos" />
+    </aside>
   )
 }
