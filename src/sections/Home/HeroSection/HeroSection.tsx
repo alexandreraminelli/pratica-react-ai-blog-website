@@ -9,15 +9,39 @@ import RedirectCard2Group from "../../../components/Cards/RedirectCard/RedirectC
 import styles from "./HeroSection.module.css"
 
 /**
+ * Interface do objeto JSON com o texto de introdução
+ */
+interface HeroSectionContent {
+  /** Texto de introdução */
+  introduction: {
+    /** Slogan exibido acima do título de introdução. */
+    slogan: string
+    /** Título de introdução. */
+    title: string
+    /** Parágrafo de introdução. */
+    paragraph: string
+  }
+}
+
+/**
  * Componente Hero Section da página inicial.
  */
 export default function HeroSection(): JSX.Element {
+  // JSON com o texto
+  const content: HeroSectionContent = {
+    introduction: {
+      slogan: "Sua jornada para o amanhã começa aqui",
+      title: "Explore as Fronteiras da Inteligência Artificial",
+      paragraph: "Bem-vindo ao centro pulsante da inovação em IA. FutureTech AI News é sua porta de entrada para um mundo onde máquinas pensam, aprendem e moldam o futuro. Embarque conosco nessa expedição visionária ao núcleo da IA.",
+    },
+  }
+
   return (
     <section className={styles.heroSection}>
       {/* Container superior */}
       <div>
         {/* Introdução (coluna esquerda) */}
-        <Introduction />
+        <Introduction introContent={content.introduction} />
 
         {/* Coluna direita */}
         <section>
@@ -41,17 +65,28 @@ export default function HeroSection(): JSX.Element {
 }
 
 /**
+ * Interface dos props do componente Introduction.
+ */
+interface IntroductionProps {
+  /** Conteúdo da introdução. */
+  introContent: HeroSectionContent["introduction"]
+}
+
+/**
  * Componente Introduction. Exibe a introdução da página inicial no Hero Section.
  */
-function Introduction(): JSX.Element {
+function Introduction({ introContent }: IntroductionProps): JSX.Element {
   return (
     <div className={styles.introduction}>
       <header>
         {/* Título e subtítulo */}
         <hgroup>
-          <p className={`dark ${styles.slogan}`}>Sua jornada para o amanhã começa aqui</p>
-          <h2>Explore as Fronteiras da Inteligência Artificial</h2>
-          <p className={`gray1 ${styles.introductionText}`}>Bem-vindo ao centro pulsante da inovação em IA. FutureTech AI News é sua porta de entrada para um mundo onde máquinas pensam, aprendem e moldam o futuro. Embarque conosco nessa expedição visionária ao núcleo da IA.</p>
+          {/* Slogan */}
+          <p className={`dark ${styles.slogan}`}>{introContent.slogan}</p>
+          {/* Título de introdução */}
+          <h2>{introContent.title}</h2>
+          {/* Parágrafo introdutório */}
+          <p className={`gray1 ${styles.introductionText}`}>{introContent.paragraph}</p>
         </hgroup>
       </header>
       {/* Contadores */}
