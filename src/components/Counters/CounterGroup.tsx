@@ -1,5 +1,5 @@
 /* importação de componentes */
-import Counter from "./Counter.tsx"
+import Counter, { CountersProps } from "./Counter.tsx"
 
 /* módulos CSS */
 import styles from "./CounterGroup.module.css"
@@ -8,6 +8,8 @@ import styles from "./CounterGroup.module.css"
  * Interface dos props do componente `CounterGroup`.
  */
 interface CounterGroupProps {
+  /** Lista com o conteúdo JSON dos contadores. */
+  counterList: CountersProps[]
   /** Classes CSS personalizadas. (opcional) */
   className?: string
 }
@@ -15,12 +17,13 @@ interface CounterGroupProps {
 /**
  * Componente de grupo de contadores. Renderiza e organiza componentes `Counter`.
  */
-export default function CounterGroup({ className }: CounterGroupProps): JSX.Element {
+export default function CounterGroup({ counterList, className }: CounterGroupProps): JSX.Element {
   return (
     <div className={`${styles.counterGroup} ${className}`}>
-      <Counter number={300} text="Recursos disponíveis" />
-      <Counter number={12} thousand text="Total de downloads" />
-      <Counter number={10} thousand text="Usuários ativos" />
+      {/* Iterar a lista de JSON `counterList` para gerar componentes `Counter`. */}
+      {counterList.map((counter) => (
+        <Counter number={counter.number} thousand={counter.thousand} text={counter.text} />
+      ))}
     </div>
   )
 }
