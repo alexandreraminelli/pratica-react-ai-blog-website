@@ -7,7 +7,7 @@ import RedirectIcon from "../../icons/RedirectIcon" // ícone de redirecionament
  * Interface dos props do componente RedirectButtonProps.
  * Reutiliza a interface ButtonWithIconProps para manter a consistência.
  */
-type RedirectButtonProps = Omit<ButtonWithIconProps, "Icon">
+export type RedirectButtonProps = Omit<ButtonWithIconProps, "Icon">
 
 /**
  * Componente do botão de redirecionamento.

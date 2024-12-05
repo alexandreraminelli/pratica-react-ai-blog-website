@@ -6,7 +6,7 @@ import styles from "./RedirectCard2.module.css"
 /**
  * Interface dos props do componente RedirectCard2.
  */
-interface RedirectCard2Props {
+export interface RedirectCard2Props {
   /** Ícone do card. */
   Icon: React.ComponentType
   /** Título do card. */

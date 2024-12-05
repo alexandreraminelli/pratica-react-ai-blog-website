@@ -2,10 +2,10 @@
 import styles from "./Counter.module.css"
 
 /** Interface dos componentes de cards contadores. */
-interface CountersProps {
+export interface CountersProps {
   /** Número do contador. */
   number: number | string
-  /** Se é um milhar (exibir o "K" no número). (opcional) */
+  /** Se é um milhar (exibir o "k" no número). (opcional) */
   thousand?: boolean
   /** Texto do contador. */
   text: string
