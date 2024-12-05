@@ -115,6 +115,13 @@
     }
   }
 
+  /* Seção de introdução */
+  .introduction {
+    /* Ajustar padding */
+    padding-inline-start: var(--padding-container);
+    padding-inline-end: 40px;
+  }
+
   /* Lista de contadores */
   .counterGroup > :first-child {
     padding-inline-start: var(--padding-container);
