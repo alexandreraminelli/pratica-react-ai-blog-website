@@ -102,7 +102,7 @@ function ResourcesAside(): JSX.Element {
         <h3>Explore mais de 1.000 recursos</h3>
         <p className="gray2">Mais de 1000 artigos sobre inovações e tendências tecnológicas</p>
       </hgroup>
-      <RedirectButton text="Explorar Recursos" link="/recursos" />
+      <RedirectButton text="Explorar Recursos" link="/recursos" darkBackground />
     </aside>
   )
 }
