@@ -1,5 +1,5 @@
 /** módulos CSS */
-import styles from "./Counters.module.css"
+import styles from "./Counter.module.css"
 
 /** Interface dos componentes de cards contadores. */
 interface CountersProps {
@@ -13,7 +13,7 @@ interface CountersProps {
 /**
  * Componente de cards contadores.
  */
-export default function Counters({ number, thousand, text }: CountersProps): JSX.Element {
+export default function Counter({ number, thousand, text }: CountersProps): JSX.Element {
   return (
     <section className={styles.counterCard}>
       {/* Contagem */}
