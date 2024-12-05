@@ -44,10 +44,6 @@
   .slogan {
     font-size: 1.125rem; /* 18px */
   }
-  /* Título */
-  h2 {
-    font-size: 1.875rem; /* 30px */
-  }
   .introductionText {
     text-align: justify;
   }
@@ -86,11 +82,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem; /* 4px */
-
-    /* Título */
-    & h3 {
-      font-size: 1.125rem; /* 18px */
-    }
   }
 }
 

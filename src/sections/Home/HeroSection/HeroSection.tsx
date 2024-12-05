@@ -150,7 +150,7 @@ function ResourcesAside({ asideContent }: ResourcesAsideProps): JSX.Element {
       <AvatarGroup />
       <hgroup>
         {/* Título do aside */}
-        <h3>{asideContent.title}</h3>
+        <h3 className="smaller">{asideContent.title}</h3>
         {/* Texto do aside */}
         <p className="gray2">{asideContent.text}</p>
       </hgroup>

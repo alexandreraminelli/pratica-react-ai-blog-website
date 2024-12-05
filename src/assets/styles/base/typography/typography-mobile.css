@@ -9,10 +9,20 @@ h1 {
 
 h2 {
   font-size: 1.75rem; /* 28px */
+
+  /* H2 maior */
+  &.bigger {
+    font-size: 1.875rem; /* 30px */
+  }
 }
 
 h3 {
   font-size: 1.5rem; /* 24px */
+
+  /* H3 menor */
+  &.smaller {
+    font-size: 1.125rem; /* 18px */
+  }
 }
 
 h4 {
