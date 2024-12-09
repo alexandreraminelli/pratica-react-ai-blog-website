@@ -28,13 +28,28 @@
   }
 }
 
+/* Botão no mobile */
+@media screen and (max-width: 1023px) {
+  /* Botão */
+  .headerSection .button {
+    width: inherit;
+    justify-content: center;
+  }
+}
+
 /* Desktop */
 @media screen and (min-width: 1024px) {
   .headerSection {
     /* layout */
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     /* espaçamento */
     padding-block: 80px;
+
+    /* Botão */
+    .button {
+      height: fit-content;
+    }
   }
 }
