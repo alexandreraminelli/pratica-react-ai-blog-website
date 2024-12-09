@@ -139,7 +139,7 @@ function LinkFooterNav({ text, link, newBadge }: LinkFooterNavProps): JSX.Elemen
       {/* Texto do link */}
       {text}
 
-      {newBadge ? <NoveltyBadge /> : ""}
+      {newBadge && <NoveltyBadge />}
     </Link>
   )
 }
