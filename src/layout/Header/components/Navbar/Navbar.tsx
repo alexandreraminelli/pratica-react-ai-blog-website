@@ -48,9 +48,9 @@ export default function Navbar(): JSX.Element {
         {/* Lista de links do Navbar */}
         <ul>
           {/* Percorrer a lista de objetos para gerar os links */}
-          {linkList.map((link) => (
+          {linkList.map((link, index) => (
             <>
-              <LinkNavbar text={link.title} link={link.link} button={link.button} />
+              <LinkNavbar key={index} text={link.title} link={link.link} button={link.button} />
             </>
           ))}
         </ul>
