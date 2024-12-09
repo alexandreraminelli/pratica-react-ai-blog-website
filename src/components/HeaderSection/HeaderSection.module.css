@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* Estilos dos cabeçalhos de seções */
+
+.headerSection {
+  /* aparência */
+  background-color: var(--background-secondary);
+  border-block: var(--border01);
+
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  /* espaçamento */
+  padding-block: 40px;
+  gap: 30px;
+
+  /* Badge + Título */
+  & hgroup {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    /* espaçamento */
+    gap: 10px;
+
+    /* remover margens */
+    h2 {
+      margin: 0;
+    }
+  }
+}
+
+/* Botão no mobile */
+@media screen and (max-width: 1023px) {
+  /* Botão */
+  .headerSection .button {
+    width: inherit;
+    justify-content: center;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .headerSection {
+    /* layout */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* espaçamento */
+    padding-block: 80px;
+
+    /* Botão */
+    .button {
+      height: fit-content;
+    }
+  }
+}

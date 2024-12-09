@@ -3,7 +3,7 @@
     "title": "Início",
     "link": "/",
     "sections": [
-      { "title": "Novidades", "sectionId": "novidades" },
+      { "title": "Funcionalidades", "sectionId": "funcionalidades" },
       { "title": "Blogs", "sectionId": "blogs" },
       { "title": "Recursos", "sectionId": "recursos", "newBadge": true },
       { "title": "Depoimentos", "sectionId": "depoimentos" },
