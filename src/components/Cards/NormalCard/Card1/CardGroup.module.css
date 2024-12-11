@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* Estilos dos grupos de cards */
+
+.cardGroup {
+  /* borda */
+  border-top: var(--border01);
+
+  /* layout */
+  display: grid;
+  /* responsividade */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* espaçamento */
+  padding: 30px 16px;
+  gap: 10px;
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .cardGroup {
+    /* espaçamento */
+    padding: 60px;
+    padding-inline-end: 0;
+    gap: 20px;
+  }
+}

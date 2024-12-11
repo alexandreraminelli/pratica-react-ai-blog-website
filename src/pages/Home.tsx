@@ -3,6 +3,7 @@
 /* importação de componentes */
 /* seções */
 import HeroSection from "../sections/Home/HeroSection/HeroSection"
+import FeaturesSection from "../sections/Home/FeaturesSection/FeaturesSection"
 
 /**
  * Componente da página inicial.
@@ -14,7 +15,8 @@ export default function Home(): JSX.Element {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Seção Novidades */}
+      {/* Seção Funcionalidades */}
+      <FeaturesSection />
 
       {/* Seção Blog */}
 

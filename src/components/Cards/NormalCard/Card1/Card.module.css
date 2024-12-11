@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* Estilos dos cards. */
+
+.card {
+  /* aparência */
+  background-color: var(--background-secondary);
+  border-radius: 10px;
+  border: var(--border01);
+
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  /* espaçamento */
+  padding: 24px;
+  gap: 4px;
+}
