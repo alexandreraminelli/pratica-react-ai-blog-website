@@ -1,5 +1,7 @@
 /* importação de componentes */
 import CardGroup from "../../../../components/Cards/NormalCard/Card1/CardGroup"
+/* importação de interfaces */
+import { CardProps } from "../../../../components/Cards/NormalCard/Card1/Card"
 /* módulos CSS */
 import styles from "./FeatureSection.module.css"
 
@@ -14,12 +16,7 @@ export interface FeatureSectionProps {
   /** Ícone exibido. */
   Icon: React.ComponentType
   /** Cards que ajudam a explicar a funcionalidade. */
-  cards: {
-    /** Título do card. */
-    cardTitle: string
-    /** Texto do card. */
-    cardText: string
-  }[]
+  cards: CardProps[]
 }
 
 /**
@@ -37,7 +34,7 @@ export default function FeatureSection({ content }: { content: FeatureSectionPro
         </div>
       </header>
       {/* Cards */}
-      <CardGroup className={styles.cardGroup} />
+      <CardGroup cardsList={content.cards} className={styles.cardGroup} />
     </section>
   )
 }

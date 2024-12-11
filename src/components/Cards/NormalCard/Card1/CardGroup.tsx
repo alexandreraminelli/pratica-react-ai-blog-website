@@ -1,10 +1,12 @@
 /* importação de componentes */
-import Card from "./Card"
+import Card, { CardProps } from "./Card"
 /* módulos CSS*/
 import styles from "./CardGroup.module.css"
 
 /** Interface dos props do CardGroup */
 interface CardGroupProps {
+  /** Lista de objetos JSON com o conteúdo dos cards. */
+  cardsList: CardProps[]
   /** Classes CSS personalizadas. (opcional) */
   className?: string
 }
@@ -12,13 +14,13 @@ interface CardGroupProps {
 /**
  * Componente que renderiza um grupo de `Card`s.
  */
-export default function CardGroup({ className }: CardGroupProps): JSX.Element {
+export default function CardGroup({ cardsList, className }: CardGroupProps): JSX.Element {
   return (
     <div className={`${styles.cardGroup} ${className && className}`}>
-      <Card title="Título" text="Lorem ipsum dolor sitmet"></Card>
-      <Card title="Título" text="Lorem ipsum dolor sitmet"></Card>
-      <Card title="Título" text="Lorem ipsum dolor sitmet"></Card>
-      <Card title="Título" text="Lorem ipsum dolor sitmet"></Card>
+      {/* Iteração para gerar os Cards */}
+      {cardsList.map((card, index) => (
+        <Card key={index} title={card.title} text={card.text}></Card>
+      ))}
     </div>
   )
 }

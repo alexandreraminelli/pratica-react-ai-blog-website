@@ -15,10 +15,10 @@ export default function FeaturesSection(): JSX.Element {
     describe: "Mantenha-se informado com nossa seção de blog dedicada à tecnologia do futuro.",
     Icon: AbstractIcon04,
     cards: [
-      { cardText: "Quantidade", cardTitle: "Mais de 1.000 artigos sobre tendências e avanços tecnológicos emergentes." },
-      { cardText: "Variedade", cardTitle: "Os artigos abrangem áreas como IA, robótica, biotecnologia e muito mais." },
-      { cardText: "Frequência", cardTitle: "Conteúdo novo adicionado diariamente para mantê-lo atualizado." },
-      { cardText: "Confiável", cardTitle: "Escrito por nossa equipe de especialistas em tecnologia e profissionais do setor." },
+      { title: "Quantidade", text: "Mais de 1.000 artigos sobre tendências e avanços tecnológicos emergentes." },
+      { title: "Variedade", text: "Os artigos abrangem áreas como IA, robótica, biotecnologia e muito mais." },
+      { title: "Frequência", text: "Conteúdo novo adicionado diariamente para mantê-lo atualizado." },
+      { title: "Confiável", text: "Escrito por nossa equipe de especialistas em tecnologia e profissionais do setor." },
     ],
   }
   const feature2: FeatureSectionProps = {
@@ -26,10 +26,10 @@ export default function FeaturesSection(): JSX.Element {
     describe: "Mergulhe fundo nos conceitos de tecnologia do futuro com nossa seção de pesquisa.",
     Icon: AbstractIcon05,
     cards: [
-      { cardText: "Profundidade", cardTitle: "Mais de 500 artigos de pesquisa para compreensão aprofundada." },
-      { cardText: "Gráficos", cardTitle: "Recursos visuais e infográficos para melhorar a compreensão." },
-      { cardText: "Tendências", cardTitle: "Explore tendências emergentes em pesquisas de tecnologia do futuro." },
-      { cardText: "Contribuidores", cardTitle: "Contribuições de pesquisadores de tecnologia e acadêmicos." },
+      { title: "Profundidade", text: "Mais de 500 artigos de pesquisa para compreensão aprofundada." },
+      { title: "Gráficos", text: "Recursos visuais e infográficos para melhorar a compreensão." },
+      { title: "Tendências", text: "Explore tendências emergentes em pesquisas de tecnologia do futuro." },
+      { title: "Contribuidores", text: "Contribuições de pesquisadores de tecnologia e acadêmicos." },
     ],
   }
 

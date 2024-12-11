@@ -2,7 +2,7 @@
 import styles from "./Card.module.css"
 
 /** Interface dos props do componente `Card`. */
-interface CardProps {
+export interface CardProps {
   /** Título do card. */
   title: string
   /** Texto do card. */
