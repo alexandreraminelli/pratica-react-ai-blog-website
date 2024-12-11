@@ -37,7 +37,7 @@ export default function FeatureSection({ content }: { content: FeatureSectionPro
         </div>
       </header>
       {/* Cards */}
-      <CardGroup />
+      <CardGroup className={styles.cardGroup} />
     </section>
   )
 }

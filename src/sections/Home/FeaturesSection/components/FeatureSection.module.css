@@ -30,3 +30,32 @@
     }
   }
 }
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .featureSection {
+    /* layout: 2 colunas */
+    display: flex;
+    flex-direction: row;
+    /* espaçamento */
+    gap: 60px;
+
+    /* Cabeçalho */
+    & > header {
+      /* tamanho da coluna */
+      width: 35%;
+      /* layout */
+      justify-content: center;
+      /* espaçamento */
+      gap: 40px;
+    }
+
+    /* Card Groups */
+    & > .cardGroup {
+      /* tamanho da coluna */
+      width: 65%;
+      /* borda lateral */
+      border-inline-start: var(--border01);
+    }
+  }
+}
