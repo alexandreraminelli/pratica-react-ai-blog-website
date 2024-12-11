@@ -33,11 +33,11 @@ export default function FeatureSection({ content }: { content: FeatureSectionPro
         <content.Icon />
         <div className={styles.text}>
           <h3>{content.feature}</h3>
-          <p>{content.describe}</p>
+          <p className="gray2">{content.describe}</p>
         </div>
       </header>
       {/* Cards */}
-      <CardGroup />
+      <CardGroup className={styles.cardGroup} />
     </section>
   )
 }
