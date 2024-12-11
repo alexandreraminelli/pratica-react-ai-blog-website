@@ -1,3 +1,8 @@
+/* importação de componentes */
+import CardGroup from "../../../../components/Cards/NormalCard/Card1/CardGroup"
+/* módulos CSS */
+import styles from "./FeatureSection.module.css"
+
 /**
  * Interface dos props do componente `FeatureSection`.
  */
@@ -22,13 +27,17 @@ export interface FeatureSectionProps {
  */
 export default function FeatureSection({ content }: { content: FeatureSectionProps }): JSX.Element {
   return (
-    <section>
-      {/* Cabeçalho do Card */}
+    <section className={`pd-container ${styles.featureSection}`}>
+      {/* Cabeçalho da seção */}
       <header>
         <content.Icon />
-        <h3>{content.feature}</h3>
-        <p>{content.describe}</p>
+        <div className={styles.text}>
+          <h3>{content.feature}</h3>
+          <p>{content.describe}</p>
+        </div>
       </header>
+      {/* Cards */}
+      <CardGroup />
     </section>
   )
 }

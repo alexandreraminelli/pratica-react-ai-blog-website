@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* Estilos da seção de funcionalidades. */
+
+.featureSection {
+  /* borda */
+  border-block: var(--border01);
+
+  /* Cabeçalho */
+  & > header {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    /* espaçamento */
+    padding-block: 50px;
+    gap: 20px;
+
+    /* Ícone */
+    & svg {
+      /* dimensões */
+      height: 50px;
+      width: 50px;
+    }
+    /* Texto */
+    & .text {
+      /* layout */
+      display: flex;
+      flex-direction: column;
+      /* espaçamento */
+      gap: 0.375rem; /* 6px */
+    }
+  }
+}
