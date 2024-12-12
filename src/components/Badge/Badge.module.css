@@ -2,27 +2,29 @@
 /* Estilos do Badge */
 
 .badge {
-  /* Background */
+  /* background */
   background-color: var(--background-gray);
-  /* Cantos arredondados */
+  /* cantos arredondados */
   border-radius: 4px;
 
-  /* Espaçamento */
+  /* espaçamento */
   padding: 4px 8px;
-  /* Altura (evitar conflitos) */
+  /* dimensões (evitar conflitos) */
   height: fit-content;
   width: fit-content;
 
-  /* Tipografia */
+  /* tipografia */
   font-size: 0.875rem; /* 14px */
   font-weight: 500;
   line-height: 150%;
+  /* não quebrar texto */
+  text-wrap: nowrap;
 }
 
 /* Tablet e Desktop */
 @media screen and (min-width: 768px) {
   .badge {
-    /* Aumentar fonte */
+    /* aumentar fonte */
     font-size: 1rem; /* 16px */
   }
 }
