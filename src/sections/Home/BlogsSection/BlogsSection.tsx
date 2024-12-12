@@ -1,5 +1,6 @@
 /* importação de componentes */
 import HeaderSection, { HeaderSectionProps } from "../../../components/HeaderSection/HeaderSection"
+import PostsSection from "../../../layout/PostsSection/PostsSection"
 
 /** Interface do conteúdo da seção de blog. */
 interface BlogsSectionContent {
@@ -7,9 +8,7 @@ interface BlogsSectionContent {
   header: HeaderSectionProps
 }
 
-/**
- * Componente da seção de páginas
- */
+/** Componente da seção de páginas. */
 export default function BlogsSection(): JSX.Element {
   /* Conteúdo */
   const content: BlogsSectionContent = {
@@ -26,6 +25,7 @@ export default function BlogsSection(): JSX.Element {
       {/* Cabeçalho */}
       <HeaderSection badge={content.header.badge} title={content.header.title} button={content.header.button} />
       {/* Corpo */}
+      <PostsSection />
     </section>
   )
 }
