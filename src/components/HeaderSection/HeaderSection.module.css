@@ -46,6 +46,7 @@
     align-items: center;
     /* espaçamento */
     padding-block: 80px;
+    gap: 18%;
 
     /* Botão */
     .button {

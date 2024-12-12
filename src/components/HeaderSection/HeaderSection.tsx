@@ -8,7 +8,7 @@ import styles from "./HeaderSection.module.css"
 /**
  * Interface dos props do componente `HeaderSection`.
  */
-interface HeaderSectionProps {
+export interface HeaderSectionProps {
   /** Texto exibido no badge no cabeçalho da seção. */
   badge: string
   /** Título da seção. */
