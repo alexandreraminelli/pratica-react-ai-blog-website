@@ -2,13 +2,15 @@
 /* Estilos do banner superior que aparece em cima do cabeçalho */
 
 .topBanner {
-  /* Layout */
+  /* layout */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  /* espaçamento */
+  padding-block: 10px 14px;
 
-  /* Tipografia */
+  /* tipografia */
   color: var(--gray-letter2);
   font-size: 0.875rem; /* 14px */
 
@@ -25,8 +27,10 @@
 /* Telas grandes */
 @media screen and (min-width: 440px) {
   .topBanner {
-    /* Alterar alinhamento */
+    /* alterar alinhamento */
     justify-content: center;
-    gap: 10px; /* espaçamento entre texto e ícone */
+    /* aumentar espaçamento */
+    gap: 10px;
+    padding-block: 12px;
   }
 }
