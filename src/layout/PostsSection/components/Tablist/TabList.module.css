@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* Estilos das tabs e lista de tabs */
+
+/* Tabs */
+.tab {
+  /* aparência */
+  border-radius: 7px;
+  border: var(--border01);
+  background: none;
+
+  /* espaçamento */
+  padding: 18px 16px;
+
+  /* tipografia */
+  font-size: 0.875rem; /* 14px */
+  color: var(--gray-letter2);
+  /* text-wrap: nowrap; */
+
+  /* tamanho */
+  min-width: 152px;
+  flex: 1;
+
+  /* transição */
+  transition-property: padding, color, border-color;
+  transition-duration: 0.5s;
+
+  /* Efeito hover */
+  &:hover {
+    color: var(--white-letter);
+    border-color: var(--primary-color);
+  }
+
+  /* Tab ativa */
+  &.active {
+    background-color: var(--background-secondary);
+    color: var(--white-letter);
+  }
+}
+
+/* Lista de tabs */
+.tabList {
+  /* layout */
+  display: flex;
+  flex-direction: row;
+
+  /* espaçamento */
+  padding-block: 20px;
+  gap: 14px;
+
+  /* rolagem horizontal */
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  /* Tabs */
+  .tab {
+    /* espaçamento */
+    padding: 24px 20px;
+  }
+}
