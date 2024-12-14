@@ -107,7 +107,7 @@ interface PostActionButtonsProps {
 /** Botões de ação do post. */
 function PostActionButtons({ buttons }: PostActionButtonsProps): JSX.Element {
   return (
-    <aside>
+    <aside className={styles.actionButtonList}>
       {/* Botão de like */}
       <PostActionButton Icon={LikeIcon} value={buttons.likes} />
       {/* Botão de comentários */}

@@ -1,8 +1,63 @@
 @charset "UTF-8";
 /* Estilos dos posts */
 
-.post{}
+.post {
+}
 
-.profileCategoryContainer{
-    
+.profileCategoryContainer {
+}
+
+/* Lista de botões de ação */
+.actionButtonList {
+  /* layout */
+  display: flex;
+  flex-direction: row;
+  /* espaçamento */
+  gap: 8px;
+}
+
+/* Botões de ação do post */
+.actionButton {
+  /* aparência */
+  background-color: var(--background-secondary);
+  border: var(--border01);
+  border-radius: 100px;
+
+  /* layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* espaçamento */
+  padding: 6px 12px;
+  gap: 2px;
+
+  /* Texto e ícone */
+  & svg,
+  & span {
+    transition: color 1s;
+  }
+  /* Ícone */
+  & svg {
+    /* dimensões */
+    height: 20px;
+    width: 20px;
+    /* cor */
+    color: var(--dark40);
+  }
+  /* Texto */
+  & span {
+    color: var(--gray-letter2);
+  }
+
+  /* Efeito hover */
+  transition: border-color 1s;
+  &:hover {
+    border-color: var(--white);
+    & svg {
+      color: var(--primary-color);
+    }
+    & span {
+      color: var(--white);
+    }
+  }
 }
