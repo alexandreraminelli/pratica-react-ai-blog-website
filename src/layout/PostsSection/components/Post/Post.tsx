@@ -2,6 +2,7 @@
 import styles from "./Post.module.css"
 /* componentes */
 import RedirectButton from "../../../../components/Buttons/RedirectButton/RedirectButton"
+import AvatarImg from "../../../../components/Avatar/AvatarImg/AvatarImg"
 /* ícones SVG */
 import LikeIcon from "../../../../components/icons/PostIcons/LikeIcon"
 import CommentIcon from "../../../../components/icons/PostIcons/CommentIcon"
@@ -39,7 +40,7 @@ export interface PostProps {
 /** Componente de bloco de post do blog. */
 export default function Post({ postContent }: PostProps): JSX.Element {
   return (
-    <article>
+    <article className={`pd-container ${styles.post}`}>
       {/* Informações de perfil e categoria */}
       <ProfileAndCategory profile={postContent.profile} category={postContent.category} />
 
@@ -47,7 +48,7 @@ export default function Post({ postContent }: PostProps): JSX.Element {
       <PostContent postContent={postContent} />
 
       {/* Botão de redirecionamento */}
-      <RedirectButton text="Ver Blog" darkBackground />
+      <Button className={styles.buttonDesktop} />
     </article>
   )
 }
@@ -59,7 +60,7 @@ interface ProfileAndCategoryProps {
     /** Nome do perfil. */
     name: string
     /** Imagem do perfil. */
-    // ProfilePicture: React.ComponentType
+    picture: string
   }
   /** Categoria do post. */
   category: string
@@ -70,13 +71,16 @@ function ProfileAndCategory({ profile, category }: ProfileAndCategoryProps): JSX
   return (
     <div className={styles.profileCategoryContainer}>
       {/* Imagem */}
+      <AvatarImg src={profile.picture} />
       {/* Perfil e categoria */}
       <div>
         {/* Perfil */}
-        <p>{profile.name}</p>
+        <p className={styles.profileName}>{profile.name}</p>
         {/* Categoria  */}
         <p className="gray2">{category}</p>
       </div>
+      {/* Botão de redirecionamento */}
+      <Button className={styles.buttonMobile} />
     </div>
   )
 }
@@ -84,13 +88,13 @@ function ProfileAndCategory({ profile, category }: ProfileAndCategoryProps): JSX
 /** Componente do conteúdo principal do post. */
 function PostContent({ postContent }: PostProps): JSX.Element {
   return (
-    <div>
+    <div className={styles.mainContent}>
       {/* Data do post */}
-      <p className="gray2">{postContent.date}</p>
+      <p className={`gray2 ${styles.date}`}>{postContent.date}</p>
 
       {/* Texto */}
       <div className={styles.mainText}>
-        <h3>{postContent.title}</h3>
+        <h3 className="smaller">{postContent.title}</h3>
         <p className="gray2">{postContent.text}</p>
       </div>
 
@@ -134,4 +138,14 @@ function PostActionButton({ Icon, value }: PostActionButtonProps): JSX.Element {
       <span>{value}</span>
     </button>
   )
+}
+
+/** Interfaces dos props do componente `Button`. */
+interface ButtonProps {
+  /** Classes CSS personalizadas. (opcional) */
+  className?: string
+}
+/** Componente do botão de "Ver Blog". */
+function Button({ className }: ButtonProps): JSX.Element {
+  return <RedirectButton text="Ver Blog" darkBackground className={className} />
 }

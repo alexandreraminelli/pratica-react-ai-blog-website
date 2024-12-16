@@ -2,9 +2,71 @@
 /* Estilos dos posts */
 
 .post {
+  border-block: var(--border01);
+
+  /* layout */
+  display: flex;
+  flex-direction: column;
+
+  /* espaçamento */
+  padding-block: 40px;
+  gap: 30px;
 }
 
+/* Container superior */
 .profileCategoryContainer {
+  /* layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* espaçamento */
+  gap: 8px;
+
+  /* Botão de direcionamento */
+  .buttonMobile {
+    margin-inline-start: auto;
+  }
+
+  /* Avatar */
+  & img {
+    border: none;
+    /* dimensões */
+    height: 60px;
+    width: 60px;
+  }
+
+  /* Nome de perfil */
+  .profileName {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+  }
+}
+
+/* Container de conteúdo */
+.mainContent {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  /* espaçamento */
+  gap: 20px;
+
+  /* Data de publicação */
+  & .date {
+    font-size: 1rem; /* 16px */
+    font-weight: 500;
+  }
+
+  /* Texto principal */
+  & .mainText {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    /* espaçamento */
+    gap: 4px;
+
+    /* tipografia */
+    text-align: justify;
+  }
 }
 
 /* Lista de botões de ação */
@@ -59,5 +121,19 @@
     & span {
       color: var(--white);
     }
+  }
+}
+
+/* Responsividade */
+/* Mobile */
+@media screen and (max-width: 1023px) {
+  .buttonDesktop {
+    display: none;
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .buttonMobile {
+    display: none;
   }
 }
