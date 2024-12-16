@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* Estilos das imagens de avatares */
+
+.avatar {
+  /* Preenchimento */
+  background-color: var(--background-tertiary);
+  /* Círculo */
+  border-radius: 50%;
+  border: var(--border04);
+
+  /* Imagem não ser selecionável */
+  user-select: none;
+
+  /* Transição ao redimensionar */
+  transition-property: width, height;
+  transition-duration: 1s;
+}
